@@ -1,0 +1,70 @@
+<div class="tp1 " fxFlex fxLayout="column">
+    <div fxFlex fxLayout="column">
+        <div fxFlex fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px" class="tp1-intro">
+            <h1 class="animate__animated animate__zoomIn">Contact Us</h1>
+        </div>
+        <div fxFlex fxLayout.xs="column" class="d-flex justify-content-center tp1-content-6" fxLayoutGap="32px">
+            <div fxFlex="40" fxFlex.xs="100" class="bg-primary-gradient tp1-content-6-1">
+                <h3>Lets Get in Touch!</h3>
+                <p>We’d love to hear from you</p>
+                <p>
+                    <a class="text-white" href="mailto:elisabeth@e-renity.io"><i
+                            class="color-info-light zmdi zmdi-email mr-8 mt-32"></i>elisabeth@e-renity.io</a>
+                </p>
+            </div>
+            <div fxFlex="60" fxFlex.xs="100">
+                <form [formGroup]="contactForm">
+                    <mat-form-field class="mr-32 mb-8" ngClass.xs="w-100">
+                        <input matInput type="text" placeholder="First Name" formControlName="firstName">
+                        <mat-error *ngIf="contactForm.get('firstName').hasError('required')">
+                            Please provide your first name.
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="mb-8" ngClass.xs="w-100">
+                        <input matInput type="text" placeholder="Last Name" formControlName="lastName">
+                        <mat-error *ngIf="contactForm.get('lastName').hasError('required')">
+                            Please provide your last name.
+                        </mat-error>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="mr-32 mb-8" ngClass.xs="w-100">
+                        <input matInput type="email" placeholder="Email" formControlName="email">
+                        <mat-error *ngIf="contactForm.get('email').hasError('required')">
+                            Please provide your email.
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="mb-8" ngClass.xs="w-100">
+                        <mat-label>Phone Number</mat-label>
+                        <lib-ngx-mat-tel-input formControlName="phoneNumber">
+                        </lib-ngx-mat-tel-input>
+                        <mat-error *ngIf="phoneNumber.hasError('required')">
+                            Please provide your phone number.
+                        </mat-error>
+                        <mat-error *ngIf="phoneNumber.hasError('format')">
+                            Phone number is <strong>invalid</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="mb-8" ngClass.xs="w-100">
+                        <input matInput type="text" placeholder="Company" formControlName="company">
+                        <mat-error *ngIf="contactForm.get('company').hasError('required')">
+                            Please provide your company.
+                        </mat-error>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="mb-8" ngClass.xs="w-100">
+                        <textarea matInput type="text" placeholder="Message" formControlName="message"></textarea>
+                        <mat-error *ngIf="contactForm.get('message').hasError('required')">
+                            Please provide your message.
+                        </mat-error>
+                    </mat-form-field>
+                    <div>
+                        <button mat-button class="btn-theme1 font-18 pr-32 pl-32 mt-32 mat-elevation-z4"
+                            ngClass.xs="w-100" (click)="onSubmit()">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

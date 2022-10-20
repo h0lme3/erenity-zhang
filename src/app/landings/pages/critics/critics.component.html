@@ -1,0 +1,21 @@
+<div class="erenity-critics">
+    <form [formGroup]="feedbackForm" class="d-flex flex-column bg-white px-32" style="    width: 300px;
+    border-radius: 30px;">
+        <h3 class="font-36 text-center">Feedback</h3>
+        <mat-form-field>
+            <input type="text" matInput placeholder="Name" formControlName="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="email" matInput placeholder="Email" formControlName="email">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="text" matInput placeholder="Subject" formControlName="subject">
+        </mat-form-field>
+        <mat-form-field>
+            <textarea type="text" matInput placeholder="Message" formControlName="message"></textarea>
+        </mat-form-field>
+        <div>
+            <button mat-button class="btn-theme1 w-100 mt-32 font-18" type="submit" (click)="onSubmit()">Submit</button>
+        </div>
+    </form>
+</div>

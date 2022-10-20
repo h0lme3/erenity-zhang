@@ -1,0 +1,51 @@
+<div class="dialog">
+    <div class="header">
+        <div class="py-4 p-relative">
+            <button mat-fab class="closed" (click)="onNoClick()">
+                <mat-icon>close</mat-icon>
+            </button>
+        </div>
+        <div class="header-icon d-flex align-items-center justify-content-center">
+            <mat-icon class="text-white">system_security_update_good</mat-icon>
+        </div>
+        <div class="d-flex w-100 justify-content-space-between">
+            <div class="w-100">
+                <div class="header-title text-center">Help Improve E-renity</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="body">
+        <!-- <div class="font-18 pt-16 mb-80">Shape the future of erenity by telling us what you think of the app</div> -->
+        <form [formGroup]="criticForm" class="d-flex flex-column pl-32 pr-32">
+            <mat-form-field>
+                <input type="text" matInput placeholder="Name" formControlName="name">
+            </mat-form-field>
+            <mat-form-field>
+                <input type="email" matInput placeholder="Email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field>
+                <input type="text" matInput placeholder="Subject" formControlName="subject">
+            </mat-form-field>
+            <mat-form-field>
+                <textarea type="text" matInput placeholder="Message" formControlName="message"></textarea>
+            </mat-form-field>
+            <div>
+                <button mat-button class="btn-theme1 w-100 mt-32 font-18 mb-60" type="submit"
+                    (click)="onSubmit()">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div></div>
+    </div>
+
+    <!-- <div class="d-flex justify-content-center mt-32 mb-60 ">
+        <button *ngIf="data?.showNoBtn" mat-raised-button data-cy="dialog-ok" cdkFocusInitial
+            class="btn-theme1  mr-32 ml-32 w-100" (click)="onNoClick()">No</button>
+        <button mat-raised-button data-cy="dialog-ok" cdkFocusInitial
+            class="btn-theme1 mr-32 ml-32 w-100 font-18 pb-8 pt-8" (click)="onYesClick()">{{data?.btnOk||"OK,
+            sure"}}</button>
+    </div> -->
+</div>

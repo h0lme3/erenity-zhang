@@ -1,0 +1,99 @@
+<div class="tp1" fxFlex fxLayout="column">
+    <div fxFlex fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px" 
+        class="tp1-intro animate__animated animate__fadeIn pb-32">
+        <h1>Joiner Board</h1>
+        <div class="d-flex align-items-center text-secondary breadcrumb">
+            <span routerLink="/">Home</span>
+            <mat-icon>navigate_next</mat-icon>
+            <span routerLink="/membership">Membership</span>
+            <mat-icon>navigate_next</mat-icon>
+            <span>Joiner Board</span>
+        </div>
+    </div>
+    
+    <div fxFlex fxLayout="column" fxLayoutAlign="left center" class="pt-32 pb-32" style="z-index: 1;">
+        <div style="width:91%">
+            <div class="title font-24 font-bold mb-16">
+                E-renity Checklist
+            </div>
+            <div>
+                <div class="desc font-18 mb-2 font-bold">
+                    The aim of this checklist is help you understand “E-renity” pre launch.
+                </div>
+                <div class="list">
+                    <ul class="list">
+                        <li>Understand the aim of the project is to provide digital serenity</li>
+                        <li>Understand the necessity of digital serenity for social and tech sectors</li>
+                        <li>Be able to list counter examples if digital serenity fails in any social or tech sector, respectively</li>
+                        <li>Understand how our programs work from our website</li>
+                        <li>Know how we operate as a revolutionary project, from cultural, professional, political, technical perspective</li>
+                        <li>Understand that confidentiality and cybersecurity protection within our organization is indispensable</li>
+                        <li>List a series of consequences if one project member or employee doesn’t do well or do as required in confidentiality guidelines and cybersecurity protection</li>
+                        <li>Remember the guidelines to certain familiarity</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="desc font-18 mb-2 font-bold">
+                    Requirement for project members:
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>Consistently contribute to the project</li>
+                        <li>Actively participate our programs that are in trial or development stages (internal education)</li>
+                        <li>Understand the guidelines of confidentiality and conform to standard cybersecurity protection (free and included in the membership)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div fxFlex fxLayout="column" fxLayoutAlign="center center" class="pt-32 pb-32" style="z-index: 1;">
+        <div>
+            <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+            <mat-toolbar>
+                <mat-toolbar-row>
+                    <span class="toolbar-spacer"></span>
+                    <mat-icon (click)="onClear()" class="mr-24 cursor-pointer" matTooltip="Remove">delete
+                    </mat-icon>
+                    <mat-icon (click)="drawingMode(false)" class="mr-24 cursor-pointer" matTooltip="Select">
+                        highlight_alt</mat-icon>
+                    <mat-icon (click)="drawingMode(true)" class="mr-24 cursor-pointer" matTooltip="Line">edit
+                    </mat-icon>
+                    <mat-icon (click)="addFigure('rectangle')" class="mr-24 cursor-pointer" matTooltip="Add Shapes">
+                        rectangle
+                    </mat-icon>
+                    <!-- <div class="custom-item-body">
+                        <input type="text" class="form-control" [cpPosition]="'bottom'" [(colorPicker)]="props.fill"
+                            [style.background]="props.fill" [value]="props.fill" (colorPickerChange)="setFill()">
+                    </div> -->
+                    <input class="mr-24" type="color" [(ngModel)]="props.fill" (ngModelChange)="setFill()"
+                        [value]="props.fill" />
+                    <mat-icon (click)="addText()" class="mr-24 cursor-pointer" matTooltip="Add Text">title</mat-icon>
+                    <!-- <mat-form-field *ngIf="isTextAdded">
+                        <input matInput [(ngModel)]="textString" type="text">
+                    </mat-form-field> -->
+                    <!-- <button class="mr-24" (click)="doneText()" *ngIf="isTextAdded" mat-stroked-button>Done</button> -->
+                    <!-- <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+                        <mat-button-toggle value="bold">Bold</mat-button-toggle>
+                        <mat-button-toggle value="italic">Italic</mat-button-toggle>
+                        <mat-button-toggle value="underline">Underline</mat-button-toggle>
+                    </mat-button-toggle-group> -->
+                </mat-toolbar-row>
+            </mat-toolbar>
+
+            <canvas [ngClass]="{'d-none': isLoading}" style="border: 1px solid #cccccc;" id="fabricSurface"></canvas>
+            <div class="mt6">
+               
+            </div>
+        </div>
+
+        <div fxFlex fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="15px" class="mt-16">
+            <div fxFlex fxLayout="row" fxLayoutGap="15px">
+            </div>
+            <button class="pl-32 pr-32 btn-theme1" style="position: fixed; bottom: 10px;" mat-raised-button [disabled]="isLoading" (click)="onSave()">
+                Save
+            </button>
+        </div>
+    </div>
+</div>

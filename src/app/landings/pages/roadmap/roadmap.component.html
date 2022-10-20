@@ -1,0 +1,223 @@
+<div fxFlex fxLayout="column" class="erenity-roadmap">
+    <div class="erenity-roadmap-intro" fxFlex fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px">
+        <h1 data-aos="zoom-in-down" data-aos-duration="1000" class="text-center mb-32 pb-16">Cybersecurity Education Roadmap
+            <br>WE REALLY DO AND CAN HELP
+        </h1>
+        <h3 data-aos="zoom-in-down" data-aos-duration="1000" class="text-center font-italic mb-32">Your Education Journey
+            Starts From Here</h3>
+        <div data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="500"
+            class="d-flex align-items-center text-secondary breadcrumb">
+            <span routerLink="/">Home</span>
+            <mat-icon>navigate_next</mat-icon> <span>Roadmap</span>
+        </div>
+        <button data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="1000"
+            (click)="scrollTo('erenity-roadmap-content')" mat-icon-button class="btn-circle-default">
+            <img src="./assets/images/scroll-down-icon.png" alt="go down">
+        </button>
+    </div>
+
+    <div class="erenity-roadmap-content" fxFlex fxLayout="column">
+        <div fxFlex fxLayoutAlign.gt-sm="center center" fxLayoutAlign.xs="start center" fxLayout.xs="column">
+            <div
+                [ngClass]="{'v-hidden animate__animated animate__backOutUp w-0 h-0':isbubble2Show||isbubble3Show||isbubble4Show}">
+                <div (click)="isbubble1Show = !isbubble1Show; bubble1=null" class="circular-sb"
+                    [ngClass]="{'active-circular':isbubble1Show, 
+                    'v-visible animate__animated animate__backInDown ':!isbubble2Show&&!isbubble3Show&&!isbubble4Show&&!isbubble1child1Show}">
+                    How do you identify yourself?
+                </div>
+                <div class="p-relative"
+                    [ngClass]="{'v-hidden d-none animate__animated animate__backOutUp w-0 h-0':bubble1!=0 && bubble1!=null}">
+                    <div class="r-bubble-1 bg-yellow" (click)="setBubbleShow(0, 'Lawyers')"
+                        [ngClass]="{'animate__animated animate__fadeIn animate__slow active-r-bubble':isbubble1Show, 'active-bubble':bubble1==0}">
+                        Lawyers
+                    </div>
+                    <app-whicharea [quest]="'Which area are you most passionate about?'" [bubble1]="bubble1"
+                        [isbubble1Show]="isbubble1Show" [bubble]="0" [isbubble1child1Show]="isbubble1child1Show"
+                        (goToPage)="goToPage()" (setChildBubbleShow)="setChildBubbleShow()"></app-whicharea>
+                </div>
+                <div class="p-relative"
+                    [ngClass]="{'v-hidden d-none animate__animated animate__backOutUp w-0 h-0':bubble1!=1 && bubble1!=null}">
+                    <div class="r-bubble-1 bg-yellow" (click)="setBubbleShow(1, 'Journalists')"
+                        [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__slow':isbubble1Show, 'active-bubble':bubble1==1}">
+                        Journalists
+                    </div>
+                    <app-whicharea [quest]="'Which area are you most passionate about?'" [bubble1]="bubble1"
+                        [isbubble1Show]="isbubble1Show" [bubble]="1" [isbubble1child1Show]="isbubble1child1Show"
+                        (goToPage)="goToPage()" (setChildBubbleShow)="setChildBubbleShow()"></app-whicharea>
+                </div>
+
+                <div class="p-relative"
+                    [ngClass]="{'v-hidden d-none animate__animated animate__backOutUp w-0 h-0':bubble1!=2 && bubble1!=null}">
+                    <div class="r-bubble-1 bg-yellow" (click)="setBubbleShow(2, 'Activists')"
+                        [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__slow':isbubble1Show, 'active-bubble':bubble1==2}">
+                        Activists
+                    </div>
+                    <app-whicharea [quest]="'Which area are you most passionate about?'" [bubble1]="bubble1"
+                        [isbubble1Show]="isbubble1Show" [bubble]="2" [isbubble1child1Show]="isbubble1child1Show"
+                        (goToPage)="goToPage()" (setChildBubbleShow)="setChildBubbleShow()"></app-whicharea>
+                </div>
+                <div class="p-relative"
+                    [ngClass]="{'v-hidden d-none animate__animated animate__backOutUp w-0 h-0':bubble1!=3 && bubble1!=null}">
+                    <div class="r-bubble-1 bg-yellow" (click)="setBubbleShow(3, 'Victims')"
+                        [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__slow':isbubble1Show, 'active-bubble':bubble1==3}">
+                        Cyberstalking/Online Harassment Victims
+                    </div>
+                    <app-whicharea [quest]="'To what level are you knowledgeable about cybersecurity?'"
+                        [bubble1]="bubble1" [isbubble1Show]="isbubble1Show" [bubble]="3"
+                        [isbubble1child1Show]="isbubble1child1Show" (goToPage)="goToPage()"
+                        (setChildBubbleShow)="setChildBubbleShow()"></app-whicharea>
+                </div>
+                <div class="p-relative"
+                    [ngClass]="{'v-hidden d-none animate__animated animate__backOutUp w-0 h-0':bubble1!=4 && bubble1!=null}">
+                    <div class="r-bubble-1 bg-yellow" (click)="setBubbleShow(4, 'Social Sector Professionals')"
+                        [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__slow':isbubble1Show, 'active-bubble':bubble1==4}">
+                        Citizens concerned about surveillance and online safety
+                    </div>
+                    <app-whicharea [quest]="'How concerned you are?'" [bubble1]="bubble1"
+                        [isbubble1Show]="isbubble1Show" [bubble]="4" [isbubble1child1Show]="isbubble1child1Show"
+                        (goToPage)="goToPage()" (setChildBubbleShow)="setChildBubbleShow()"></app-whicharea>
+                </div>
+                <div class="p-relative"
+                    [ngClass]="{'v-hidden d-none animate__animated animate__backOutUp w-0 h-0':bubble1!=5 && bubble1!=null}">
+                    <div class="r-bubble-1 bg-yellow" (click)="setBubbleShow(5, 'Cybersecurity Professionals')"
+                        [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__slow':isbubble1Show, 'active-bubble':bubble1==5}">
+                        Cybersecurity Professionals
+                    </div>
+                    <app-whicharea [quest]="'What kind of breakthroughs you are expecting to gain from our site?'"
+                        [bubble1]="bubble1" [isbubble1Show]="isbubble1Show" [bubble]="5"
+                        [isbubble1child1Show]="isbubble1child1Show" (goToPage)="goToPage()"
+                        (setChildBubbleShow)="setChildBubbleShow()"></app-whicharea>
+                </div>
+                <div class="p-relative"
+                    [ngClass]="{'v-hidden d-none animate__animated animate__backOutUp w-0 h-0':bubble1!=6 && bubble1!=null}">
+                    <div class="r-bubble-1 bg-yellow" (click)="setBubbleShow(6, 'Researchers')"
+                        [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__slow':isbubble1Show, 'active-bubble':bubble1==6}">
+                        Academic Researchers
+                    </div>
+                    <app-whicharea [quest]="'What kind of breakthroughs you are expecting to gain from our site?'"
+                        [bubble1]="bubble1" [isbubble1Show]="isbubble1Show" [bubble]="6"
+                        [isbubble1child1Show]="isbubble1child1Show" (goToPage)="goToPage()"
+                        (setChildBubbleShow)="setChildBubbleShow()"></app-whicharea>
+                </div>
+                <div class="p-relative"
+                    [ngClass]="{'v-hidden d-none animate__animated animate__backOutUp w-0 h-0':bubble1!=7 && bubble1!=null}">
+                    <div class="r-bubble-1 bg-yellow" (click)="setBubbleShow(7, 'CS Student')"
+                        [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__slow':isbubble1Show, 'active-bubble':bubble1==7}">
+                        CS Student
+                    </div>
+                    <app-whicharea [quest]="'Which area are you most passionate about?'" [bubble1]="bubble1"
+                        [isbubble1Show]="isbubble1Show" [bubble]="7" [isbubble1child1Show]="isbubble1child1Show"
+                        (goToPage)="goToPage()" (setChildBubbleShow)="setChildBubbleShow()"></app-whicharea>
+                </div>
+            </div>
+
+            <div
+                [ngClass]="{'v-hidden animate__animated animate__backOutUp w-0 h-0':isbubble1Show||isbubble3Show||isbubble4Show}">
+                <div (click)="isbubble2Show = !isbubble2Show; bubble2=null" class="circular-sb"
+                    [ngClass]="{'active-circular':isbubble2Show, 
+                    'v-visible animate__animated animate__backInDown ':!isbubble1Show&&!isbubble3Show&&!isbubble4Show}">
+                    Your learning motivation?
+                </div>
+                <div class="r-bubble-2 bg-light-yellow" (click)="bubble2=0;type='Social Sector Professionals'"
+                    [ngClass]="{'animate__animated animate__fadeIn active-r-bubble':isbubble2Show}">
+                    To
+                    tackle
+                    the basic cyberattacks at work, be able to do hands-on tech setup without needing to ask for IT help
+                    constantly
+                </div>
+                <div class="r-bubble-2 bg-light-yellow" (click)="bubble2=1;type='tech'"
+                    [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__slow':isbubble2Show}">
+                    To learn how to prevent further harassment and stalking, overcome the cyber terror
+                </div>
+                <div class="r-bubble-2 bg-light-yellow" (click)="bubble2=2;type='Social Sector Professionals'"
+                    [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__slow':isbubble2Show}">
+                    To protect
+                    yourself from government surveillance and illegal data stealth
+                </div>
+                <div class="r-bubble-2 bg-light-yellow" (click)="bubble2=3;type='tech'"
+                    [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__slow':isbubble2Show}">
+                    To get the latest virus types and advanced social engineering strategies, obtain most advanced datas
+                </div>
+            </div>
+            <div
+                [ngClass]="{'v-hidden animate__animated animate__backOutUp w-0 h-0':isbubble1Show||isbubble2Show||isbubble4Show}">
+                <div (click)="isbubble3Show = !isbubble3Show; bubble3=null" class="circular-sb"
+                    [ngClass]="{'active-circular':isbubble3Show,
+                    'v-visible animate__animated animate__backInDown ':!isbubble1Show&&!isbubble2Show&&!isbubble4Show}">
+                    Your expected learning result?
+                </div>
+                <div class="r-bubble-3 bg-primary" (click)="bubble3=0;type='Social Sector Professionals'"
+                    [ngClass]="{'animate__animated animate__fadeIn active-r-bubble':isbubble3Show}">
+                    Be able to
+                    advocate for what you believe in without the interference from malicious actors, worry-free in
+                    expression and full-stack support for social justice
+                </div>
+                <div class="r-bubble-3 bg-primary" (click)="bubble3=1;type='Tech Sector'"
+                    [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__slow':isbubble3Show}">
+                    Achieve competence in resisting the online aggression by your abusers mentally and technologically
+                </div>
+                <div class="r-bubble-3 bg-primary" (click)="bubble3=2;type='Social Sector Professionals'"
+                    [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__slow':isbubble3Show}">
+                    Learn the
+                    truth and debunked myths about government surveillance, data protection laws, and tech companies'
+                    privacy policies
+                </div>
+                <div class="r-bubble-3 bg-primary" (click)="bubble3=3;type='Tech Sector'"
+                    [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__slow':isbubble3Show}">
+                    Obtain the first hand datas directly from victims upon their consents and work with the most
+                    advanced
+                    hacking methods
+                </div>
+            </div>
+            <div
+                [ngClass]="{'v-hidden animate__animated animate__backOutUp w-0 h-0':isbubble1Show||isbubble2Show||isbubble3Show}">
+                <div (click)="isbubble4Show = !isbubble4Show" class="circular-sb" [ngClass]="{'active-circular':isbubble4Show,
+                'v-visible animate__animated animate__backInDown ':(!isbubble1Show&&!isbubble2Show&&!isbubble3Show)}">
+                 <span style="position: relative; top: 10px;">More about us</span> <br><br>
+                </div>
+                <div class="r-bubble-4 bg-light-yellow"
+                    [ngClass]="{'animate__animated animate__fadeIn active-r-bubble':isbubble4Show}">
+                    We
+                    understand you and provide you not only the digital protection but the expanded support to connect
+                    you
+                    with professionals/victims
+
+                </div>
+                <div class="r-bubble-4 bg-light-yellow"
+                    [ngClass]="{'animate__animated animate__fadeIn active-r-bubble':isbubble4Show}">
+                    We support you comprehensively and fight the battle with you together technologically and mentally
+                </div>
+                <div class="r-bubble-4 bg-light-yellow"
+                    [ngClass]="{'animate__animated animate__fadeIn active-r-bubble':isbubble4Show}">
+                    We equip you
+                    with knowledge and education you with patience and encouragement
+                </div>
+                <div class="r-bubble-4 bg-light-yellow"
+                    [ngClass]="{'animate__animated animate__fadeIn active-r-bubble':isbubble4Show}">
+                    We reveal the top-notch information and real life datas from advanced hackers, company you in your
+                    research process in computer security, cryptography and social engineering
+                </div>
+            </div>
+            <div [ngClass]="{'d-none animate__animated animate__backOutUp w-0 h-0':bubble2==null}">
+                <button (click)="goToPage()" mat-raised-button class="btn-theme1 " [ngClass]="{ 
+                'v-visible animate__animated animate__backInDown px-32 ml-32 font-24':bubble2!=null}">
+                    Take the SDT now
+                </button>
+                <button mat-raised-button class="btn-theme1 " [ngClass]="{ 
+                    'v-visible animate__animated animate__backInDown px-32 ml-32 font-24':bubble2!=null}">
+                    More About Us
+                </button>
+            </div>
+            <div [ngClass]="{'d-none animate__animated animate__backOutUp w-0 h-0':bubble3==null}">
+                <button (click)="goToPage()" mat-raised-button class="btn-theme1 " [ngClass]="{ 
+                'v-visible animate__animated animate__backInDown px-32 ml-32 font-24':bubble3!=null}">
+                    Take the SDT now
+                </button>
+                <button mat-raised-button class="btn-theme1 " [ngClass]="{ 
+                    'v-visible animate__animated animate__backInDown px-32 ml-32 font-24':bubble3!=null}">
+                    More About Us
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

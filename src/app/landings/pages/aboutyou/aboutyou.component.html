@@ -1,0 +1,127 @@
+<div class="tp1" fxFlex fxLayout="column">
+    <div fxFlex fxLayout="column">
+        <div fxFlex fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px" class="tp1-intro ">
+            <h1 class="animate__animated animate__zoomIn">About You</h1>
+            <div class="d-flex align-items-center text-secondary breadcrumb animate__animated animate__zoomIn">
+                <span routerLink="/">Home</span>
+                <mat-icon>navigate_next</mat-icon> <span>About You</span>
+            </div>
+        </div>
+    </div>
+    <div class="tp1-content-3 mh-100">
+        <mat-tab-group>
+            <mat-tab label="Your datas are not secure" class="font-18">
+                <h3 class="mb-32">Your datas are not secure</h3>
+                <img class="w-100" height="300" style="object-fit: cover;"
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1115&q=80"
+                    alt="">
+                <br>
+                <br>
+                <p class="font-18">
+                    The reason you are seeing the “Not Secure” warning is because the web page or website you are
+                    visiting is not providing an encrypted connection. When your Chrome browser connects to a website it
+                    can either use the HTTP (insecure) or HTTPS (secure)
+                </p>
+                <h3 class="mt-60">Why do we need to care about cybersecurity?</h3>
+                <div class="d-flex flex-wrap justify-content-space-between mt-32 mb-60">
+                    <mat-card class="example-card mr-32 mb-60 mat-elevation-z4">
+                        <img style="width: 300px; object-fit: cover;" height="350px" mat-card-image
+                            src="./assets/images/globalattack.JPG" alt="photo">
+                        <mat-card-content>
+                            <p>
+                                Global Cyberattack Map
+                                <br>
+                                <br>
+                            </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <a target="_blank" href="https://www.fireeye.com/cyber-map/threat-map.html"><button
+                                    mat-button>Read
+                                    More</button></a>
+                        </mat-card-actions>
+                    </mat-card>
+                    <mat-card class="example-card mr-32 mb-60 mat-elevation-z4">
+                        <img style="width: 300px;object-fit: cover;" height="350px" mat-card-image
+                            src="./assets/images/hybrid.JPG" alt="photo">
+                        <mat-card-content>
+                            <p>
+                                Hybrid Analysis Engines
+                                <br>
+                                <br>
+                            </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <a target="_blank" href="https://www.hybrid-analysis.com/"><button mat-button>Read
+                                    More</button></a>
+                        </mat-card-actions>
+                    </mat-card>
+                    <mat-card class="example-card mb-32 mat-elevation-z4">
+                        <img style="width: 300px;object-fit: cover;" height="350px" mat-card-image
+                            src="./assets/images/scienceD.JPG" alt="photo">
+                        <mat-card-content>
+                            <p style="width: 200px;">
+                                China’s security wall is easy to break in
+                            </p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <a target="_blank"
+                                href="https://www.sciencedirect.com/science/article/abs/pii/S2214212621001861?via%3Dihub"><button
+                                    mat-button>Read
+                                    More</button></a>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
+                <br><br>
+
+                <strong class="font-24">Related Links</strong>
+                <br>
+                <br>
+                <a style="color:#0f9dff;" class="font-20" routerLink="/membership"> Join Board</a>
+                <br>
+                <br>
+                <a style="color:#0f9dff;" class="font-20" routerLink="/roadmap">Program Roadmap</a>
+            </mat-tab>
+            <mat-tab label="Trust is long broken" class="font-18">
+                <h3>Trust is long broken</h3>
+                <p class="font-18">
+                    The true birth of cybersecurity occurred in the 1970s. This began with a project called The Advanced
+                    Research Projects Agency Network (ARPANET). This was the connectivity network developed prior to the
+                    internet itself. A man named Bob Thomas determined it was possible for a computer program to move
+                    over a
+                    network.
+                </p>
+                <br><br>
+                <strong class="font-24">Related Links</strong>
+                <br>
+                <br>
+                <a style="color:#0f9dff;" class="font-20" routerLink="/membership"> Join Board</a>
+                <br>
+                <br>
+                <a style="color:#0f9dff;" class="font-20" routerLink="/roadmap">Program Roadmap</a>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+    <div fxFlex fxLayout="row" class="tp1-content-2 bg-4 animate__animated animate__fadeIn">
+        <div fxLayoutAlign="center center" class=" tp1-c-2-1 " (click)="goToRoadmap()"
+            routerLinkActive="router-link-active">
+            <h3 class="cursor-pointer">Which Professional Career Are You Having</h3>
+        </div>
+    </div>
+    <div fxFlex fxLayout="row" class="tp1-content-2 bg-4 animate__animated animate__fadeIn">
+        <div fxLayoutAlign="center center" class=" tp1-c-2-1 ml-50" [routerLink]="['/aboutyou/book-consultation']"
+            routerLinkActive="router-link-active" routerLinkActive="router-link-active">
+            <h3 class="cursor-pointer">I AM a Victim, I Want to Get Help Now</h3>
+        </div>
+    </div>
+
+    <div fxFlex fxLayout="row" fxLayoutAlign="center center">
+        <div class="serenity-for-electronics mh-35">
+            <h3 class="text-center" [ngClass]="{'animate__animated animate__zoomIn v-visible':showTitle}">Serenity Made
+                For
+                Electronics.</h3>
+            <h4 class="text-center sub-1"
+                [ngClass]="{'animate__animated animate__zoomIn v-visible animate__slow':showTitle}">Knowledge to
+                cybersecurity guards our right to privacy! </h4>
+        </div>
+    </div>
+</div>

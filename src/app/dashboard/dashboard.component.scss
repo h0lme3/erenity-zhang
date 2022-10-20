@@ -1,0 +1,261 @@
+@import 'src/scss/variables';
+
+$width-menu:188px;
+
+.admin-fixed {
+    headerbar{
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .app-mn-cntn{
+        padding-top: 64px;
+    }
+
+    menubar{
+       position: fixed;
+       top: 64px;
+       left: 0;
+       bottom: 0;
+       z-index: 999;
+       width: 200px;
+       &.collapse-menu-active{
+            z-index: 99999;
+           transition: all .5s ease-in-out;
+           padding-right: 60px;
+            width: 200px;
+           transform: translateX(calc(-100% + 60px));
+           &:hover{
+               transform: translateX(0);
+           }
+       }
+    }
+    .app-cntent{
+        transition: all .5s ease-in-out;
+        margin-left: $width-menu + 15px;
+        max-width: calc(100% - 210px);
+        &.collapse-active{
+            margin-left: 40px;
+            transition: all .5s ease-in-out;
+            max-width: none;
+        }
+    }
+}
+
+.app-cntent{
+    margin: 8px 0;
+}
+.admin-content{
+    min-height: 76vh;
+    position: relative;
+
+}
+
+
+@media only screen and (max-width:1024px ) {
+    .app-cntent{
+        margin-left: 10px !important;
+        margin-right: 10px;
+        width: calc(100% - 20px);
+    }
+    .addc-scroll{
+        box-shadow: 2px 0px 5px rgba(0,0,0,.2) !important;
+        transform: translateX(-200px);
+        transition: all .3s;
+        &.active{
+            transform: translateX(0);
+        }
+    }
+}
+
+//table
+$table-radius: 8px;
+
+.oct-table-container {
+    border-radius: 8px;
+    filter: drop-shadow( 0 2px 2px rgba(0,0,0,.05));
+    min-width: 1000px;
+    overflow-x: auto;
+    &.rounded{
+        border-radius: 0 !important;
+        filter: none;
+    }
+}
+.oct-table{
+    &.oct-tbl-rect{
+        border-radius: $table-radius;
+        thead{
+            th.mat-header-cell{
+                &:first-child{
+                    border-radius: $table-radius 0 0 0 ;
+                }
+                &:last-child{
+                    border-radius: 0 $table-radius 0 0 ;
+                }
+            }
+        }
+        tbody{
+            tr:last-child{
+                border-radius: 0 0 $table-radius $table-radius;
+    
+                td.mat-cell{
+                    &:first-child{
+                        border-radius: 0  0 0 $table-radius;
+                    }
+                    &:last-child{
+                        border-radius: 0 0 $table-radius  0 ;
+                    }
+                }
+            }
+        }
+    }
+    
+    thead{
+        tr.mat-header-row{
+            height: auto;
+        }
+        th.mat-header-cell{
+            background: darken($base, 5%);
+            color: #fff;
+            font-family: $roboto;
+            font-size: 12px;
+            font-weight: normal;
+            padding: 10px 0 10px 24px;
+        }
+     
+    }
+
+    tbody{
+        td.mat-cell, td.mat-footer-cell, th.mat-header-cell{
+            padding: 10px 0 10px 24px;
+        }
+    }
+
+    thead{
+        th{
+            .mat-sort-header-arrow{
+                display: none;
+            }
+
+            .mat-sort-header-content{
+                color: #fff;
+                position: relative;
+                height: 20px;
+                padding-right: 10px;
+
+                &::before,
+                &::after{
+                    position: absolute;
+                    color: #fff;
+                    font-family: "Material Icons";
+                    font-size: 6px;
+                    font-size: 14px;
+                    right: -9px;
+                }
+
+                &::before{
+                    transition: all 1s;
+                    content: "\e5ce";
+                    top: -7px;
+                }
+                &::after{
+                    content:'\e5cf';
+                    bottom: -7px;
+                }
+            }
+
+            &[aria-sort=ascending]{
+                .mat-sort-header-content{
+                    &::after{
+                        content:none;
+                    }
+                }
+            }
+            &[aria-sort=descending]{
+                .mat-sort-header-content{
+                    &::before{
+                        content:none;
+                    }
+                }
+            }
+            &.mat-sort-header-disabled{
+                .mat-sort-header-content{
+                    &::before,&::after{
+                        content:none;
+                    }
+                }
+            }
+        }
+    }
+
+    .lh-12{
+        line-height: 12px;
+    }
+
+    &.oct-table-disable-icon-hide{
+        .mat-sort-header-disabled{
+            .mat-sort-header-button{
+                &:before,&:after{
+                    content: none;
+                }
+            }
+            .mat-sort-header-arrow {
+                display: none;
+            }
+        }
+    }
+    .mat-sort-header-container{
+        position: inherit;
+    }
+    &.light thead{
+        th {
+            .mat-sort-header-content{
+                color: #000 !important;
+            }
+            .mat-sort-header-content::before,
+            .mat-sort-header-content::after{
+                color :#000 !important;
+            }
+        }
+        th.mat-header-cell{
+            background: lighten($base,12%);
+            color: #000;
+        }
+        th .mat-sort-header-container:not(.mat-sort-header-sorted){
+            .mat-sort-header-arrow{
+                opacity: 0 !important;
+            }    
+        }
+        .mat-sort-header-arrow{
+            .mat-sort-header-stem{background: transparent}
+            .mat-sort-header-indicator{
+                .mat-sort-header-pointer-left,
+                .mat-sort-header-pointer-right,
+                .mat-sort-header-pointer-middle{
+                    color: #000 !important;
+                }
+            }
+        }
+        th:not([aria-sort]){
+            .mat-sort-header-button{
+                &::before,
+                &::after{
+                    color: #000;
+                }
+            }
+
+        }
+    }
+}
+
+.oct-table-page{
+    background: transparent;
+    .mat-paginator-container{
+        display: flex;
+        justify-content: center;
+    }
+}
+

@@ -1,0 +1,79 @@
+<header class="admin-header">
+    <div class="d-flex">
+        <div class="addc-logo logo">
+            <button class="btn-bg-none rounded border menuact">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a [routerLink]="['/']" >
+                <img [src]="logo" alt="logo">
+            </a>
+        </div>
+        <div class="cntr ">
+            <div class="d-flex justify-content-space-between align-items-start w-100">
+                <div class="p-relative" >
+                    <div class="search">
+                        <div class="d-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 24 24" version="1.1"><g id="Icons/Search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Group"><rect id="base" x="0" y="0" width="24" height="24"/><path d="M18.6201176,19.9817624 L18.6201176,19.9817624 L14.0508399,15.4216232 L14.0508399,14.6996773 L13.8040989,14.4437978 C11.3780536,16.526018 7.74000941,16.3181012 5.5669863,13.9730409 C3.39396319,11.6279807 3.46330228,7.98465983 5.72398105,5.72398105 C7.98465983,3.46330228 11.6279807,3.39396319 13.9730409,5.5669863 C16.3181012,7.74000941 16.526018,11.3780536 14.4437978,13.8040989 L14.6996773,14.0508399 L15.4216232,14.0508399 L19.9817624,18.6201176 L18.6201176,19.9808485 L18.6201176,19.9817624 Z M9.93848996,5.82614002 C7.6673018,5.82614002 5.82614002,7.6673018 5.82614002,9.93848996 C5.82614002,12.2096781 7.6673018,14.0508399 9.93848996,14.0508399 C12.2096781,14.0508399 14.0508399,12.2096781 14.0508399,9.93848996 C14.0483217,7.66834569 12.2086342,5.82865821 9.93848996,5.82614002 Z" id="Shape" fill="#b597f6" fill-rule="nonzero"/></g></g></svg>
+                            <input type="text" class="placeholder-grey-50 font-12" [placeholder]="'header.searchforanything' | translate"  >
+                        </div>
+                    </div>
+                    <!-- <div class="menu-lnk pt-2 pb-2" *ngIf="showLnk" > 
+                        <div *ngIf="fmn.length > 0">
+                            <div class="menu-item addc-scroll" *ngFor="let menu of fmn; let i = index">
+                                <a class="menu-link d-flex text-black align-items-center p-2 text-decoration-none hover-bg-primary-50" [routerLink]="['/'+menu.path]">
+                                    <i *ngIf="menu.iconclass != undefined" class="icn {{menu.iconclass}}"></i>
+                                    <img *ngIf="menu.icon != undefined" style="width: 24px;" src="{{menu.icon}}" alt="{{menu.icon}}">
+                                    <div class="pl-2 font-base text-capitalize" *ngIf="!menu.havechild" [innerHTML]="menu.text|translate"></div>
+                                    <div class="pl-2 font-base text-capitalize" *ngIf="menu.havechild">
+                                        <b>{{menu.title1 | translate}}</b> 
+                                        <i class="px-2 fa fa-angle-right"></i> 
+                                        {{menu.title2 | translate}}
+                                    </div>
+                                </a>
+                            </div>   
+                        </div>
+                        <div *ngIf="fmn.length==0">
+                            <div class="p-4 text-center font-base">{{'HEADER_ADMIN_PAGE.MENUNOTFOUND' | translate}}</div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="d-flex justify-content-end">
+                    <div class="time-now font-base font-bold mt-8 font-14">{{dateNow |date:"dd/MM/yyyy hh:mm a"}} </div>
+                   
+                    <!-- <div>
+                      <translate-dropdown></translate-dropdown>
+                    </div> -->
+
+                    <div class="d-flex profile btn-menu-dropdown-header pl-0 ml-0" >
+                        <button class="bt-profile w-100 ml-0 pl-1" id="profilemenu" [matMenuTriggerFor]="profilemenu"  >
+                            <div class="mx-2">
+                                <div class="user-pic" >
+                                    <img src="./assets/images/profile.jpg" alt="profile"  *ngIf="photoProfile == undefined">
+                                    <img src="{{photoProfile}}" alt="{{photoProfile}}" *ngIf="photoProfile != undefined">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="user-name">
+                                    <div class="font-base" >user</div>
+                                </div>
+                            </div>
+                        </button >
+                        <mat-menu #profilemenu="matMenu" class="menu-dropdown-header ">
+                            <button mat-menu-item class="mn-container" >
+                                {{'header.changepicture' | translate}}
+                            </button>
+                            <button mat-menu-item class="mn-container" [routerLink]="['./settings']">
+                                {{'header.settings' | translate}}
+                            </button>
+                            <button mat-menu-item class="mn-container" (click)="logout()" >
+                                {{'header.logout' | translate}}
+                            </button>
+                        </mat-menu>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+

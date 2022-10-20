@@ -1,0 +1,32 @@
+<div class="erenity-login">
+    <form [formGroup]="loginForm" class="d-flex flex-column mat-elevation-z4 px-32">
+        <h3 class="font-30 mt-0 text-center">Sign In</h3>
+        <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input type="text" matInput formControlName="username">
+            <mat-error *ngIf="errorValid">
+                Invalid username or password. Please try again.
+            </mat-error>
+            <mat-error *ngIf="loginForm.get('username').hasError('required')">
+                Please provide your username.
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="pd">
+            <mat-error *ngIf="loginForm.get('pd').hasError('required')">
+                Please provide your password.
+            </mat-error>
+        </mat-form-field>
+        <p class="text-center mb-0 mt-24 font-14">Tip: Your password should be minimum 8 characters with at least 1
+            upper case, 1 lower case and 1 special
+            character.</p>
+        <div>
+            <button mat-button class="btn-theme1 w-100 mt-24 mb-24 pb-8 pt-8 font-18" type="submit"
+                (click)="onSubmit()">Sign
+                In</button>
+        </div>
+        <a class="font-14 text-underline text-center">Forgot Password</a>
+        <a class="font-14 text-underline text-center mt-2" routerLink="/signup">Don't have an account? Sign up here</a>
+    </form>
+</div>

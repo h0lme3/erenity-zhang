@@ -1,0 +1,90 @@
+<div fxFlex fxLayout="column" class="erenity-footer">
+    <div fxFlex fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="center center">
+        <div fxFlex.xl="25" fxFlex="33" fxFlex.md="33" fxFlex.sm="80" fxFlex.xs="80" fxLayout="column"
+            class="erenity-footer-left">
+            <h3>{{"footer.title1" | translate}}</h3>
+            <div fxLayout="row" fxLayoutGap="32px">
+                <div fxLayout="column">
+                    <p routerLink="/" (click)="scrollTo.emit('home');">
+                        <mat-icon>home</mat-icon> {{"footer.t1s1" | translate}}
+                    </p>
+                    <p routerLink="/contactus">
+                        <mat-icon>contacts</mat-icon>{{"footer.t1s2" | translate}}
+                    </p>
+                    <p routerLink="/aboutyou">
+                        <mat-icon>ballot</mat-icon>{{"footer.t1s3" | translate}}
+                    </p>
+                    <p routerLink="/aboutus">
+                        <mat-icon>ballot</mat-icon>{{"footer.t1s4" | translate}}
+                    </p>
+                    <p routerLink="/about-our-relationship">
+                        <mat-icon>ballot</mat-icon>{{"footer.t1s5" | translate}}
+                    </p>
+                    <p routerLink="/privacy-policy">
+                        <mat-icon>ballot</mat-icon>{{"footer.t1s6" | translate}}
+                    </p>
+                </div>
+                <div fxLayout="column">
+                    <p routerLink="/membership">
+                        <mat-icon>card_membership</mat-icon>{{"footer.t1s7" | translate}}
+                    </p>
+                    <p routerLink="/aboutyou/book-consultation">
+                        <mat-icon>help_center</mat-icon>{{"footer.t1s8" | translate}}
+                    </p>
+                    <p routerLink="/roadmap">
+                        <mat-icon>map</mat-icon>{{"footer.t1s9" | translate}}
+                    </p>
+                    <p>
+                        <mat-icon>ballot</mat-icon>
+                        <a class="text-white" routerLink="/blog">
+                            {{"footer.t1s10" | translate}}
+                        </a>
+                    </p>
+                    <p routerLink="/inProgress">
+                        <mat-icon>map</mat-icon>{{"footer.t1s11" | translate}}
+                    </p>
+                </div>
+            </div>
+            <!-- <span class="spacer"></span> -->
+            <!-- <div fxLayoutAlign="center center">
+                <button mat-raised-button class="btn-theme1 font-16" routerLink="/survey">{{"btnTakeSurvey" | translate}}</button>
+            </div> -->
+        </div>
+        <div fxFlex.xl="33" fxFlex="33" fxFlex.md="33" fxFlex.sm="100" fxFlex.xs="100" fxLayout="column"
+            fxLayoutAlign="start center" class="erenity-footer-center">
+            <h3 class="text-center">{{"footer.title2" | translate}}</h3>
+            <p style="text-align: center; width: 300px;line-height: 1.5;">{{"footer.p1" | translate}} <br>{{"footer.p2" | translate}}</p>
+        </div>
+        <div fxFlex.xl="25" fxFlex="25" fxFlex.md="25" fxFlex.sm="100" fxFlex.xs="100" fxLayout="column"
+            fxLayoutAlign=" end" fxLayoutAlign.sm="center center" fxLayoutAlign.xs="center center" fxLayoutGap.xs="20px"
+            fxLayoutGap.sm="20px" class="erenity-footer-right">
+            <img src="./assets/images/serv41.png" width="180" alt="logo">
+            <p><a class="text-white" href="mailto:elisabeth@e-renity.io"><i
+                        class="color-info-light zmdi zmdi-email mr-8 mt-32"></i>elisabeth@e-renity.io</a></p>
+            <h3 class="mt-32">{{"footer.title3" | translate}}</h3>
+            <div fxFlex="row" fxLayoutGap="10px">
+                <button mat-fab>
+                    <i class="zmdi zmdi-facebook"></i>
+                </button>
+                <button mat-fab>
+                    <i class="zmdi zmdi-twitter"></i>
+                </button>
+                <button mat-fab>
+                    <i class="zmdi zmdi-youtube-play"></i>
+                </button>
+            </div>
+            <div fxFlex="row" fxLayoutGap="10px">
+                <button mat-fab>
+                    <i class="zmdi zmdi-google"></i>
+                </button>
+                <button mat-fab>
+                    <i class="zmdi zmdi-instagram"></i>
+                </button>
+                <button mat-fab>
+                    <i class="zmdi zmdi-github"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div fxFlex fxLayout="row" fxLayoutAlign="center center" class="erenity-footer-bottom text-center">{{"footer.copyright" | translate}}</div>
+</div>

@@ -1,0 +1,67 @@
+<div fxFlex fxLayout="column" class="erenity-special-design">
+    <div class="special-designed-test" fxFlex fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px">
+        <h1>Special Designed Test (SDT) </h1>
+        <h3>For {{type}} </h3>
+        <div class="d-flex align-items-center text-secondary breadcrumb">
+            <span routerLink="/">Home</span>
+            <mat-icon>navigate_next</mat-icon>
+            <span routerLink="/roadmap">Roadmap</span>
+            <mat-icon>navigate_next</mat-icon>
+            <span>SDT</span>
+        </div>
+        <button (click)="scrollTo('special-designed-content')" mat-icon-button class="btn-circle-default">
+            <img src="./assets/images/scroll-down-icon.png" alt="go down">
+        </button>
+    </div>
+    <div fxFlex fxLayout="column" fxLayoutAlign="center center" class="special-designed-content">
+        <h3>Getting Started</h3>
+        <div class="p-relative w-100 d-flex justify-content-center" style="max-width:100%;">
+            <form data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="1000" style="max-width: 378px; top: 0;" *ngIf="showForm"
+                [formGroup]="myFormGroup" (ngSubmit)="onSubmit()" autocomplete="off"
+                class="d-flex flex-column w-100 p-absolute">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input type="text" matInput placeholder="" formControlName="firstName">
+                    <mat-error *ngIf="myFormGroup.get('firstName').hasError('required')">
+                        Please provide your first name.
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input type="text" matInput placeholder="" formControlName="lastName">
+                    <mat-error *ngIf="myFormGroup.get('lastName').hasError('required')">
+                        Please provide your last name.
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput placeholder="" formControlName="email">
+                    <mat-error *ngIf="myFormGroup.get('email').hasError('required')">
+                        Please provide your Email.
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Phone Number</mat-label>
+                    <lib-ngx-mat-tel-input formControlName="phoneNumber">
+                    </lib-ngx-mat-tel-input>
+                    <mat-error *ngIf="phoneNumber.hasError('required')">
+                        Please provide your phone number.
+                    </mat-error>
+                    <mat-error *ngIf="phoneNumber.hasError('format')">
+                        Phone number is <strong>invalid</strong>
+                    </mat-error>
+                </mat-form-field>
+                <div class="d-flex justify-content-center align-items-center">
+                    <button type="submit" mat-button class="btn-theme1 pl-32 pr-32 mt-16 font-18">Submit</button>
+                </div>
+            </form>
+            <div fxLayout="column" fxLayoutAlign="center center" class="box-sector"
+                [ngClass]="{'bg-primary': type == 'tech', 'bg-yellow': type == 'social','bg-light-yellow': type == 'cyberstalking', 'v-hidden animate__animated animate__bounceOut': showForm}"
+                (click)="showForm = true">
+                <span style="text-transform: capitalize;" class="text-center font-36">{{type}}</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,122 @@
+<div class="erenity-roadmap" fxFlex fxLayout="column">
+    <h3 data-aos="zoom-in" data-aos-duration="1000">Cybersecurity self-education roadmap - WE REALLY DO AND CAN HELP</h3>
+    <div fxFlex fxLayoutAlign="center center" fxLayout.xs="column" fxLayoutGap.gt-sm="30px">
+        <div>
+            <div (click)="isbubble1Show = !isbubble1Show" class="circular-sb"
+                [ngClass]="{'active-circular':isbubble1Show}">
+                How do you identify yourself?
+                <!-- <div class="circle3"></div> -->
+                <!-- <div class="circle4"></div> -->
+            </div>
+            <div class="r-bubble-1" (click)="goToPage('bubble1', 0);bubble1=0;"
+                [ngClass]="{'animate__animated animate__fadeIn active-r-bubble':isbubble1Show, 'bg-yellow':bubble1==0}">
+                Lawyers,
+                journalists, activists
+                (Which area are you most passionate about? )
+            </div>
+            <div class="r-bubble-1" (click)="goToPage('bubble1', 1);bubble1=1"
+                [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__delay-1s':isbubble1Show, 'bg-yellow':bubble1==1}">
+                Cyberstalking/online harassment victims
+                (To what level are you knowledgeable about cybersecurity)
+            </div>
+            <div class="r-bubble-1" (click)="goToPage('bubble1', 2);bubble1=2"
+                [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__delay-2s':isbubble1Show, 'bg-yellow':bubble1==2}">
+                Citizens
+                concerned about surveillance and
+                online safety
+                (How concerned you are?)
+            </div>
+            <div class="r-bubble-1" (click)="goToPage('bubble1', 3);bubble1=3"
+                [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__delay-3s':isbubble1Show, 'bg-yellow':bubble1==3}">
+                Cybersecurity professionals, academic
+                researchers
+                (What kind of breakthroughs you are expecting to gain from our site)
+            </div>
+        </div>
+        <div>
+            <div (click)="isbubble2Show = !isbubble2Show" class="circular-sb"
+                [ngClass]="{'active-circular':isbubble2Show}">
+                Your learning motivation?
+                <!-- <div class="circle3"></div> -->
+                <!-- <div class="circle4"></div> -->
+            </div>
+            <div class="r-bubble-2" (click)="goToPage('bubble2', 0);bubble2=0"
+                [ngClass]="{'animate__animated animate__fadeIn active-r-bubble':isbubble2Show, 'bg-light-yellow':bubble2==0}">
+                To
+                tackle
+                the basic cyberattacks at work, be able to do hands-on tech setup without needing to ask for IT help
+                constantly
+            </div>
+            <div class="r-bubble-2" (click)="goToPage('bubble2', 1);bubble2=1"
+                [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__delay-1s':isbubble2Show, 'bg-light-yellow':bubble2==1}">
+                To learn how to prevent further harassment and stalking, overcome the cyber terror
+            </div>
+            <div class="r-bubble-2" (click)="goToPage('bubble2', 2);bubble2=2"
+                [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__delay-2s':isbubble2Show, 'bg-light-yellow':bubble2==2}">
+                To protect
+                yourself from government surveillance and illegal data stealth
+            </div>
+            <div class="r-bubble-2" (click)="goToPage('bubble2', 3);bubble2=3"
+                [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__delay-3s':isbubble2Show, 'bg-light-yellow':bubble2==3}">
+                To get the latest virus types and advanced social engineering strategies, obtain most advanced datas
+            </div>
+        </div>
+        <div>
+            <div (click)="isbubble3Show = !isbubble3Show" class="circular-sb"
+                [ngClass]="{'active-circular':isbubble3Show}">
+                Your expected learning result?
+                <!-- <div class="circle3"></div> -->
+                <!-- <div class="circle4"></div> -->
+            </div>
+            <div class="r-bubble-3" (click)="bubble3=0"
+                [ngClass]="{'animate__animated animate__fadeIn active-r-bubble':isbubble3Show, 'bg-primary':bubble3==0}">
+                Be able to
+                advocate for what you believe in without the interference from malicious actors, worry-free in
+                expression and full-stack support for social justice
+            </div>
+            <div class="r-bubble-3" (click)="bubble3=1"
+                [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__delay-1s':isbubble3Show, 'bg-primary':bubble3==1}">
+                Achieve competence in resisting the online aggression by your abusers mentally and technologically
+            </div>
+            <div class="r-bubble-3" (click)="bubble3=2"
+                [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__delay-2s':isbubble3Show, 'bg-primary':bubble3==2}">
+                Learn the
+                truth and debunked myths about government surveillance, data protection laws, and tech companies'
+                privacy policies
+            </div>
+            <div class="r-bubble-3" (click)="bubble3=3"
+                [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__delay-3s':isbubble3Show, 'bg-primary':bubble3==3}">
+                Obtain the first hand datas directly from victims upon their consents and work with the most advanced
+                hacking methods
+            </div>
+        </div>
+        <div>
+            <div class="circular-sb mb-50" [ngClass]="{'active-circular':isbubble4Show}">
+                More about us
+                <!-- <div class="circle3"></div> -->
+                <!-- <div class="circle4"></div> -->
+            </div>
+            <div class="r-bubble-4" 
+                [ngClass]="{'animate__animated animate__fadeInLeft active-r-bubble':bubble3 == 0 && isbubble3Show, 'bg-light-yellow':bubble4==0}">
+                We
+                understand you and provide you not only the digital protection but the expanded support to connect you
+                with professionals/victims
+
+            </div>
+            <div class="r-bubble-4" 
+                [ngClass]="{'animate__animated animate__fadeInLeft active-r-bubble':bubble3 == 1 && isbubble3Show, 'bg-light-yellow':bubble4==1}">
+                We support you comprehensively and fight the battle with you together technologically and mentally
+            </div>
+            <div class="r-bubble-4"
+                [ngClass]="{'animate__animated animate__fadeInLeft active-r-bubble':bubble3 == 2 && isbubble3Show, 'bg-light-yellow':bubble4==2}">
+                We equip you
+                with knowledge and education you with patience and encouragement
+            </div>
+            <div class="r-bubble-4" 
+                [ngClass]="{'animate__animated animate__fadeInLeft active-r-bubble':bubble3 == 3 && isbubble3Show, 'bg-light-yellow':bubble4==3}">
+                We reveal the top-notch information and real life datas from advanced hackers, company you in your
+                research process in computer security, cryptography and social engineering
+            </div>
+        </div>
+    </div>
+</div>

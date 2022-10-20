@@ -1,0 +1,54 @@
+<form class="d-flex justify-content-center" [formGroup]="formGroup">
+    <ng-template matStepLabel>Step 1</ng-template>
+    <div class="sdt-question-box mat-elevation-z4">
+        <h3 [innerHtml]="content.question" class="mt-0 mb-24 font-26" ngClass.xs="font-18">{{content.question}}</h3>
+
+        <div *ngIf="content.layout == null">
+            <div *ngFor="let answer of answers">
+
+                <button [ngClass]="{'sdt-answer-active': answer.value == formGroup.get(answer.formControlName).value}"
+                    class="w-100 sdt-answer-box" *ngIf="answer.type == 'choose'"
+                    (click)="formGroup.get(answer.formControlName).setValue(answer.value)">
+                    <p class="ml-8 mr-8 text-left">{{answer.value}}</p>
+                </button>
+
+
+                <mat-form-field class="w-100" appearance="outline" *ngIf="answer.type != 'choose'">
+                    <mat-label>{{answer.label}}</mat-label>
+                    <input [type]="answer.type" [placeholder]="answer.placeholder" matInput
+                        [formControlName]="answer.formControlName">
+                    <mat-error>{{answer.error}}</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div *ngIf="content.layout == 'column'" class="d-flex justify-content-space-between">
+            <mat-button-toggle-group *ngFor="let answer of answers" class="w-100">
+                <mat-button-toggle class="w-100"
+                    [ngClass]="{'sdt-answer-active2': answer.value == formGroup.get(answer.formControlName).value}"
+                    *ngIf="answer.type == 'choose'"
+                    (click)="formGroup.get(answer.formControlName).setValue(answer.value)">{{answer.value}}
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+        <div *ngIf="content.layout == 'column'" class="d-flex justify-content-space-between">
+            <p>Not at all likely</p>
+            <p>Extremely likely</p>
+        </div>
+
+        <div *ngIf="content.isShowButton" class="mb-24 mt-16">
+            <button mat-button class="btn-theme1 pr-32 pl-32" (click)="result.emit({formGroup:formGroup, content:content})">{{isSubmit?'Submit':'Next'}}</button>
+        </div>
+
+        <div *ngIf="content.isShowNote"
+            class="px-20 d-flex justify-content-center align-items-center sdt-question-note">
+            <svg class="mr-15" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                <path
+                    d="M25 0C11.1914 0 0 11.1914 0 25C0 38.8086 11.1914 50 25 50C38.8086 50 50 38.8086 50 25C50 11.1914 38.8086 0 25 0ZM25 12.5C26.7256 12.5 28.125 13.8994 28.125 15.625C28.125 17.3506 26.7256 18.75 25 18.75C23.2744 18.75 21.875 17.3535 21.875 15.625C21.875 13.8965 23.2715 12.5 25 12.5ZM28.9062 37.5H21.0938C19.8047 37.5 18.75 36.4551 18.75 35.1562C18.75 33.8574 19.7998 32.8125 21.0938 32.8125H22.6562V26.5625H21.875C20.5811 26.5625 19.5312 25.5127 19.5312 24.2188C19.5312 22.9248 20.5859 21.875 21.875 21.875H25C26.2939 21.875 27.3438 22.9248 27.3438 24.2188V32.8125H28.9062C30.2002 32.8125 31.25 33.8623 31.25 35.1562C31.25 36.4502 30.2051 37.5 28.9062 37.5Z"
+                    fill="#1E98FD" />
+            </svg>
+            <p class="font-14" *ngIf="content.note">
+                What is Clearnet? please go to our <a [routerLink]="['/inProgress']">amateur tech man test</a>`
+            </p>
+        </div>
+    </div>
+</form>

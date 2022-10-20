@@ -1,0 +1,319 @@
+<nav fxFlex fxLayout="row" fxLayoutAlign="center center" [ngClass]="{'fixed-headers': isSticky }">
+    <div class="logo-content mr-32 ml-32">
+        <img src="./assets/images/serv4.png" alt="logo" routerLink="/">
+        <small class="nav-quote introTw3"
+            [ngClass]="{'text-black':this.isblackMenu, 'text-white':!this.isblackMenu}"></small>
+    </div>
+    <div *ngIf="loggedIn" class="menu" fxFlex fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="25px">
+        <div class="d-flex justify-space-between"
+            [ngClass]="{'font-weight-500': this.menuActive == 'contactus', 'text-black':this.isblackMenu, 'text-white':!this.isblackMenu}">
+            <a [ngClass]="{'text-black':this.isblackMenu, 'text-white':!this.isblackMenu}" (click)="logout()">Sign Out
+            </a>
+            <!-- <mat-icon class="ml-8 tsn" [ngClass]="{'rotate-90':activeMenu ==0}">keyboard_arrow_down</mat-icon> -->
+        </div>
+        <div>
+            <button [center-mat-menu]="menuTrigger3" mat-icon-button>
+                <mat-icon [ngClass]="{'text-black':this.isblackMenu, 'text-white':!this.isblackMenu}">language
+                </mat-icon>
+            </button>
+        </div>
+    </div>
+    <div *ngIf="!loggedIn" class="menu" fxFlex fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="25px">
+        <div class="d-flex justify-space-between"
+            [ngClass]="{'font-weight-500': this.menuActive == 'contactus', 'text-black':this.isblackMenu, 'text-white':!this.isblackMenu}">
+            <a [ngClass]="{'text-black':this.isblackMenu, 'text-white':!this.isblackMenu}"
+                [center-mat-menu]="menuTrigger">{{'NAV.menu1' | translate}} </a>
+            <mat-icon class="ml-8 tsn" [ngClass]="{'rotate-90':activeMenu ==0}">keyboard_arrow_down</mat-icon>
+        </div>
+        <!-- <div class="d-flex justify-space-between" routerLink="/contactus"
+            [ngClass]="{'font-weight-500': this.menuActive == 'contactus', 'text-black':this.isblackMenu, 'text-white':!this.isblackMenu}">
+            <a [ngClass]="{'text-black':this.isblackMenu, 'text-white':!this.isblackMenu}">{{'NAV.menu2' | translate}}
+            </a>
+            <mat-icon class="ml-8 tsn">keyboard_arrow_down</mat-icon>
+        </div> -->
+        <!-- <div class="d-flex justify-space-between"
+            [ngClass]="{'font-weight-500': this.menuActive == 'blog', 'text-black':this.isblackMenu, 'text-white':!this.isblackMenu}">
+            <a href="https://e-renity-fbd2.mailchimpsites.com/" target="_blank"
+                [ngClass]="{'text-black':this.isblackMenu, 'text-white':!this.isblackMenu}">{{'NAV.menu3' |
+                translate}}</a>
+            <mat-icon class="ml-8 tsn">keyboard_arrow_down</mat-icon>
+        </div> -->
+        <div class="d-flex justify-space-between"
+            [ngClass]="{'font-weight-500': this.menuActive == 'membership', 'text-black':this.isblackMenu, 'text-white':!this.isblackMenu}">
+            <a [ngClass]="{'text-black':this.isblackMenu, 'text-white':!this.isblackMenu}"
+                [center-mat-menu]="menuTrigger2">{{'NAV.menu4'
+                | translate}}</a>
+            <mat-icon class="ml-8 tsn" [ngClass]="{'rotate-90':activeMenu ==3}">keyboard_arrow_down</mat-icon>
+        </div>
+        <div class="d-flex justify-space-between"
+            [ngClass]="{'font-weight-500': this.menuActive == 'roadmap','text-black':this.isblackMenu, 'text-white':!this.isblackMenu}">
+            <a [ngClass]="{'text-black':this.isblackMenu, 'text-white':!this.isblackMenu}"
+                [matMenuTriggerFor]="iwanthelp">{{'NAV.menu5' |
+                translate}}</a>
+            <mat-icon class="ml-8 tsn">keyboard_arrow_down</mat-icon>
+        </div>
+        <div class="d-flex justify-space-between" routerLink="/blog"
+            [ngClass]="{'font-weight-500': this.menuActive == 'roadmap','text-black':this.isblackMenu, 'text-white':!this.isblackMenu}">
+            <a [ngClass]="{'text-black':this.isblackMenu, 'text-white':!this.isblackMenu}">{{'NAV.menu7' |
+                translate}}</a>
+            <!-- <mat-icon class="ml-8 tsn">keyboard_arrow_down</mat-icon> -->
+        </div>
+        <div class="d-flex justify-space-between" 
+            [ngClass]="{'font-weight-500': this.menuActive == 'roadmap','text-black':this.isblackMenu, 'text-white':!this.isblackMenu}">
+            <a [ngClass]="{'text-black':this.isblackMenu, 'text-white':!this.isblackMenu}"  [matMenuTriggerFor]="loginregister">{{'NAV.menu6' |
+                translate}}</a>
+            <mat-icon class="ml-8 tsn">keyboard_arrow_down</mat-icon>
+        </div>
+        <div>
+            <button [center-mat-menu]="menuTrigger3" mat-icon-button>
+                <mat-icon [ngClass]="{'text-black':this.isblackMenu, 'text-white':!this.isblackMenu}">language
+                </mat-icon>
+            </button>
+        </div>
+    </div>
+
+
+    <div #menuTrigger="matMenuTrigger" (menuOpened)="activeMenu=0" (menuClosed)="activeMenu=null" 
+        [matMenuTriggerFor]="aboutErenity"></div>
+    <div #menuTrigger2="matMenuTrigger" (menuOpened)="activeMenu=3" (menuClosed)="activeMenu=null"
+        [matMenuTriggerFor]="membership"></div>
+    <div #menuTrigger3="matMenuTrigger" (menuOpened)="activeMenu=5" (menuClosed)="activeMenu=null"
+        [matMenuTriggerFor]="language"></div>
+    <div #menuTrigger4="matMenuTrigger" (menuOpened)="activeMenu=6" (menuClosed)="activeMenu=null"
+        [matMenuTriggerFor]="iwanthelp" ></div>
+    <div #menuTrigger4="matMenuTrigger" (menuOpened)="activeMenu=7" (menuClosed)="activeMenu=null"
+        [matMenuTriggerFor]="loginregister"></div>
+
+
+    <mat-menu #language xPosition="before">
+        <menu *ngFor="let item of langMenu" mat-menu-item (click)="translate.use(item.lang)">{{item.name}}</menu>
+    </mat-menu>
+
+    <mat-menu #iwanthelp="matMenu" backdropClass="mn-right">
+        <div class="d-flex nav-menu" (click)="$event.stopPropagation()">
+            <div class="px-60 side-left">
+                <div>
+                    <h1 (click)="activeMenuContent2 = 'Membership'"
+                        [ngClass]="{'active-menu-content':activeMenuContent2=='Membership'}">HELP</h1>
+                </div>
+            </div>
+            <div class="px-60 d-flex">
+                <div class="pr-32" style="min-width: 480px;">
+                    <ul *ngIf="activeMenuContent2=='Membership'">
+                        <li class="d-block" *ngFor="let item of [{name:'Book Consultation', router:'/aboutyou/book-consultation'}, {name:'Contact us', router:'/contactus'}]" 
+                        (click)="menuTrigger2.closeMenu();" [routerLink]="item.router">
+                            <span>{{item.name}}</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <img style="object-fit: contain;" src="./assets/images/serv4.png" width="200" alt="logo" routerLink="/"> -->
+            </div>
+        </div>
+    </mat-menu>
+
+    <mat-menu #loginregister="matMenu"  backdropClass="mn-right">
+        <div class="d-flex nav-menu" (click)="$event.stopPropagation()">
+            <div class="px-60 side-left">
+                <div>
+                    <h1 (click)="activeMenuContent2 = 'Membership'"
+                        [ngClass]="{'active-menu-content':activeMenuContent2=='Membership'}">LOGIN/SIGN UP</h1>
+                </div>
+            </div>
+            <div class="px-60 d-flex">
+                <div class="pr-32" style="min-width: 480px;">
+                    <ul *ngIf="activeMenuContent2=='Membership'">
+                        <li class="d-block" *ngFor="let item of [{name:'Login', router:'/login'}, {name:'Sign Up', router:'/signup'}]" 
+                        (click)="menuTrigger2.closeMenu();" [routerLink]="item.router">
+                            <span>{{item.name}}</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <img style="object-fit: contain;" src="./assets/images/serv4.png" width="200" alt="logo" routerLink="/"> -->
+            </div>
+        </div>
+    </mat-menu>
+
+    <mat-menu #aboutErenity="matMenu" class="home-menu" backdropClass="mn-left">
+        <div class="d-flex nav-menu" (click)="$event.stopPropagation()">
+            <div class="px-60 side-left">
+                <div>
+                    <h1 (click)="activeMenuContent = 'About Us';routerTo = '/aboutus'"
+                        [ngClass]="{'active-menu-content':activeMenuContent=='About Us'}">About Us</h1>
+                </div>
+                <div>
+                    <h1 (click)="activeMenuContent = 'About You';routerTo = '/aboutyou'"
+                        [ngClass]="{'active-menu-content':activeMenuContent=='About You'}">About You</h1>
+                </div>
+                <div>
+                    <h1 (click)="onGoToAOR()"
+                        [ngClass]="{'active-menu-content':activeMenuContent=='About Our Relationship'}">About Our
+                        Relationship </h1>
+                </div>
+                <div>
+                    <h1 routerLink="/view-our-product"
+                        [ngClass]="{'active-menu-content':activeMenuContent=='View Our Products & Services'}">View Our
+                        Products & Services</h1>
+                </div>
+                <div>
+                    <h1 routerLink="/for-founders"
+                        [ngClass]="{'active-menu-content':activeMenuContent=='For Funders'}">For Funders</h1>
+                </div>
+            </div>
+            <div class="px-32 d-flex">
+                <div style="min-width: 470px;">
+                    <h2 class="cursor-pointer" [routerLink]="routerTo" (click)="menuTrigger.closeMenu()">
+                        {{activeMenuContent}}
+                        <div class="border"></div>
+                    </h2>
+                    <ul *ngIf="activeMenuContent=='About Us'">
+                        <li (click)="menuTrigger.closeMenu()" routerLink="/aboutus">Who founded this & why E-renity?
+                        </li>
+                        <br>
+                        <li (click)="menuTrigger.closeMenu()" routerLink="/aboutus/endabuse-project">E-renity is an
+                            EndAbuse
+                            Tier 2 Project</li><br>
+                        <li (click)="menuTrigger.closeMenu()" routerLink="/aboutus/first-project">E-renity is
+                            Yintelligentsia's First Project</li>
+                    </ul>
+                    <ul *ngIf="activeMenuContent=='About You'">
+                        <li (click)="menuTrigger.closeMenu()" routerLink="/aboutyou">Why Should You Have E-renity?</li>
+                        <br>
+                        <li (click)="menuTrigger.closeMenu()" (click)="goToRoadmap()">Which professional career are you
+                            Having?</li><br>
+                        <li (click)="menuTrigger.closeMenu()" routerLink="/aboutyou/book-consultation">I am a victim, i
+                            want to get
+                            direct help,
+                            Now!</li><br>
+                    </ul>
+                    <ul *ngIf="activeMenuContent=='About Our Relationship'">
+                        <li (click)="menuTrigger.closeMenu()" routerLink="/about-our-relationship">A Rare Opportunity
+                            for a
+                            Rare Talent</li><br>
+                        <li (click)="menuTrigger.closeMenu()" routerLink="/about-our-relationship/work-with-us">Work
+                            With Us
+                        </li><br>
+                        <li (click)="menuTrigger.closeMenu()" (click)="openCriticForms()">Critics</li><br>
+                        <li (click)="menuTrigger.closeMenu(); generalService.goTo('/membership', 'membership-price')">I
+                            am
+                            an investor, vc, or stakeholder, or
+                            I'm interested in cofounding!</li><br>
+                        <li (click)="menuTrigger.closeMenu(); generalService.goTo('/membership', 'membership-price')">I
+                            want to be a volunteer in the project
+                            to learn more about it first</li><br>
+                        <li (click)="menuTrigger.closeMenu(); generalService.goTo('/membership', 'membership-price')">I
+                            want to get employed in E-renity</li>
+                        <br>
+                        <li (click)="trigger.closeMenu()" routerLink="/membership">Membership</li><br>
+                    </ul>
+                </div>
+                <!-- <img *ngIf="activeMenuContent=='About Us'" style="object-fit: contain;" src="./assets/images/serv4.png"
+                    width="200" height="160" alt="logo" routerLink="/"> -->
+                <img *ngIf="activeMenuContent=='About You'" style="object-fit: contain;"
+                    src="./assets/images/about you.png" width="200" height="160" alt="logo">
+                <img *ngIf="activeMenuContent=='About Our Relationship'" style="object-fit: contain;"
+                    src="./assets/images/aboutOur.png" width="200" height="160" alt="logo">
+            </div>
+        </div>
+    </mat-menu>
+
+    <mat-menu #membership="matMenu"  backdropClass="mn-left">
+        <div class="d-flex nav-menu" (click)="$event.stopPropagation()">
+            <div class="px-60 side-left">
+                <div>
+                    <h1 (click)="activeMenuContent2 = 'Membership'"
+                        [ngClass]="{'active-menu-content':activeMenuContent2=='Membership'}">Membership</h1>
+                </div>
+            </div>
+            <div class="px-60 d-flex">
+                <div class="pr-32" style="min-width: 480px;">
+                    <ul *ngIf="activeMenuContent2=='Membership'">
+                        <li (click)="menuTrigger2.closeMenu();" routerLink="membership">Membership Introduction</li><br>
+                        <li (click)="menuTrigger2.closeMenu();" routerLink="/roadmap">Your Cyber-Education starts from
+                            Here
+                        </li><br>
+                        <li (click)="menuTrigger2.closeMenu(); generalService.goTo('/membership', 'membership-price')">
+                            Membership Prices / Payment Page</li><br>
+                        <li (click)="menuTrigger2.closeMenu();" routerLink="/membership/joiner-board">Joiner Board</li>
+                    </ul>
+                </div>
+                <!-- <img style="object-fit: contain;" src="./assets/images/serv4.png" width="200" alt="logo" routerLink="/"> -->
+            </div>
+        </div>
+    </mat-menu>
+
+
+    <mat-menu #aboutUs="matMenu" >
+        <button routerLink="/aboutus" mat-menu-item class="font-bold">Who founded this & why E-renity?</button>
+        <button routerLink="/aboutus/endabuse-project" mat-menu-item class="font-bold">E-renity is an EndAbuse Tier 2
+            Project</button>
+        <button routerLink="/aboutus/first-project" mat-menu-item class="font-bold">E-renity is Yintelligentsia's First
+            project</button>
+    </mat-menu>
+
+    <mat-menu #aboutYou="matMenu">
+        <button routerLink="/aboutyou" mat-menu-item class="font-bold">Why Should You Have E-renity?</button>
+        <button (click)="goToRoadmap()" mat-menu-item class="font-bold">Which professional career are you
+            Having?</button>
+        <button (click)="trigger.closeMenu()" [matMenuTriggerFor]="aboutYou2" routerLink="/victim-sector" mat-menu-item
+            class="font-bold">I am a victim, i want to get direct help,
+            Now!</button>
+    </mat-menu>
+
+    <mat-menu #aboutYou1="matMenu">
+        <button routerLink="/aboutyou" mat-menu-item class="font-bold">Your datas are not secure</button>
+        <button routerLink="/aboutyou" mat-menu-item class="font-bold">Trust is long broken</button>
+    </mat-menu>
+
+    <mat-menu #aboutYou2="matMenu">
+        <button routerLink="/victim-sector" mat-menu-item class="font-bold">Another option program roadmap</button>
+        <button routerLink="/aboutyou/book-consultation" mat-menu-item class="font-bold">Book a consultation with
+            Elisabeth at anytime you want</button>
+    </mat-menu>
+
+    <mat-menu #aboutOur="matMenu">
+        <button [matMenuTriggerFor]="aboutOur1" routerLink="/about-our-relationship/work-with-us" mat-menu-item
+            class="font-bold">Work With
+            Us</button>
+        <button routerLink="/critics" mat-menu-item class="font-bold">Critics</button>
+        <button routerLink="/membership" mat-menu-item class="font-bold">Membership</button>
+    </mat-menu>
+
+    <mat-menu #aboutOur1="matMenu">
+        <button routerLink="/about-our-relationship/work-with-us" mat-menu-item class="font-bold">Work Ethic</button>
+        <button routerLink="/membership" mat-menu-item class="font-bold">Everyone is a member</button>
+    </mat-menu>
+
+
+    <div class="menu-icon">
+        <button (click)="isMenuOpened = !isMenuOpened" mat-icon-button>
+            <mat-icon [ngClass]="{'text-black':this.isblackMenu, 'text-white':!this.isblackMenu}">menu</mat-icon>
+        </button>
+    </div>
+
+    <div class="side-menu" [ngClass]="{'open':isMenuOpened}">
+        <div class="side-link" (click)="isMenuOpened=false" routerLink="/view-our-product">
+            <a >Product and Service</a>
+        </div>
+        <div (click)="isMenuOpened=false" routerLink="/contactus" class="side-link">
+            <a>Contact Us</a>
+        </div>
+        <div class="side-link">
+            <a href="https://e-renity-fbd2.mailchimpsites.com/" target="_blank">Blog</a>
+        </div>
+        <div (click)="isMenuOpened=false" routerLink="/membership" class="side-link">
+            <a>Become a Member</a>
+        </div>
+        <div (click)="isMenuOpened=false" routerLink="/aboutyou/book-consultation" class="side-link">
+            <a>I WANT HELP!</a>
+        </div>
+        <div (click)="isMenuOpened=false" routerLink="/aboutus" class="side-link">
+            <a>About Us</a>
+        </div>
+        <div (click)="isMenuOpened=false" routerLink="/aboutyou" class="side-link">
+            <a>About You</a>
+        </div>
+        <div (click)="isMenuOpened=false" routerLink="/about-our-relationship" class="side-link">
+            <a>About Our Relationship</a>
+        </div>
+    </div>
+</nav>

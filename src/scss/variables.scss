@@ -1,0 +1,55 @@
+@import url(//db.onlinewebfonts.com/c/ca315f3f9f6e1609d538039c319243f9?family=FuturaLTW01-Heavy);
+@import url(//db.onlinewebfonts.com/c/77d394fa0c1103c648f880b77cb4a32f?family=FuturaLTW01-Medium);
+
+
+@font-face {font-family: "FuturaLTW01-Medium"; src: url("//db.onlinewebfonts.com/t/77d394fa0c1103c648f880b77cb4a32f.eot"); src: url("//db.onlinewebfonts.com/t/77d394fa0c1103c648f880b77cb4a32f.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/77d394fa0c1103c648f880b77cb4a32f.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/77d394fa0c1103c648f880b77cb4a32f.woff") format("woff"), url("//db.onlinewebfonts.com/t/77d394fa0c1103c648f880b77cb4a32f.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/77d394fa0c1103c648f880b77cb4a32f.svg#FuturaLTW01-Medium") format("svg"); }
+@font-face {font-family: "FuturaLTW01-Heavy"; src: url("//db.onlinewebfonts.com/t/ca315f3f9f6e1609d538039c319243f9.eot"); src: url("//db.onlinewebfonts.com/t/ca315f3f9f6e1609d538039c319243f9.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ca315f3f9f6e1609d538039c319243f9.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ca315f3f9f6e1609d538039c319243f9.woff") format("woff"), url("//db.onlinewebfonts.com/t/ca315f3f9f6e1609d538039c319243f9.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ca315f3f9f6e1609d538039c319243f9.svg#FuturaLTW01-Heavy") format("svg"); }
+
+@font-face {
+    font-family: 'Source Serif 4';
+    src: url('../assets/fonts/SourceSerif4-Regular.eot');
+    src: url('../assets/fonts/SourceSerif4-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/SourceSerif4-Regular.woff2') format('woff2'),
+        url('../assets/fonts/SourceSerif4-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+$font-title:"Source Serif 4";
+$font-content: "Regular Open Sans", Arial, Helvetica, sans-serif;  ;
+
+$primary-r-gradient:linear-gradient(90deg, #1E98FD, #FF00F7);
+$primary-r-gradient2:linear-gradient(90deg, #1E98FD, #F9B900);
+$secondary-r-gradient:linear-gradient(90deg, #FF00D8, #FF542E);
+$third-r-gradient:linear-gradient(90deg, #00A2FF, #000000);
+$yellow-r-gradient:linear-gradient(90deg, #F6B879, #FAE132);
+$yellow-r-gradient2:linear-gradient(180deg, #F6B879, #FAE132);
+$yellow-r-gradient3:linear-gradient(180deg, #E6D161, #e6d26100);
+$blue-r-gradient3:linear-gradient(180deg, #00A2FF, #e6d26100);
+$pink-r-gradient:linear-gradient(270deg, #C8B2E9, #F0EAF9);
+$text-secondary: #757575;
+
+$base: #b597f6;
+$pinkStrong:#fc6dab;
+$primary:#030404;
+$gray:#fafafa;
+$pink:#FF00F7;
+$reddish:#FF211E;
+$pinkSoft:#C8B2E9;
+$yellow:#F9B900;
+$light-yellow:#FAE132;
+$yellow3:#FFFEDF;
+$yellow4:#e5f5ff;
+$yellow2:#EEEADF;
+$blue-geenish-light:#75E9D3;
+$blue-geenish-light2:#eafdfc;
+$blue-geenish-dark:#11AC9E;
+$blue-geenish-dark2:#199d98;
+$blue-geenish-dark3: linear-gradient(90deg, #015C90, #287d9fbe);
+$error : #e1a0a6;
+$erenity-gradient:linear-gradient(90deg, #eee17e, #ffdc0d);
+
+$playfair : "Playfair Display", Georgia, "Times New Roman", serif;
+$roboto: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;

@@ -1,0 +1,27 @@
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../../../../assets/images/blurimg.jpeg');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+.ttls{
+    font-size: 9vw;
+}
+.justdesc{
+    position: absolute;
+    font-size: 3vw;
+}
+.jurnalist{
+    bottom:20%;
+    left: 24%;
+}
+.lawyers{
+    top:20%;
+    right: 24%;
+}

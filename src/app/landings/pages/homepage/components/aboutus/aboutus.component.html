@@ -1,0 +1,65 @@
+<div class="erenity-about d-flex flex-column">
+    <div class="d-flex justify-content-center align-items-center" ngClass.xs="flex-column">
+        <h3 data-aos="zoom-in" data-aos-duration="1000"><span class="e-title">E-renity</span></h3>
+    </div>
+    <div data-aos="zoom-in" data-aos-duration="1000"
+        class="about-links align-items-center justify-content-center d-flex" ngClass.gt-sm="flex-row"
+        ngClass.xs="flex-column">
+        <div ngClass.gt-sm="mr-60" ngClass.xs="mb-30">
+            <div class="about-bubble-1" (click)="openBubble(0)" [ngClass]="{'big-bubble':about1==true}">
+                <button *ngIf="about1==true" class="close-bubble" mat-icon-button (click)="closeBubble(0)">
+                    <mat-icon>close</mat-icon>
+                </button>
+                <span [ngClass]="{'mb-32':about1}">{{"about.about1" | translate}}</span>
+                <div *ngIf="about1" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000">
+                    <ol>
+                        <li *ngFor="let item of contents">
+                            <a class="text-white" [routerLink]="item.route">
+                                <div>{{item.content | translate}}</div>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div ngClass.gt-sm="mr-60" ngClass.xs="mb-30">
+            <div class="about-bubble-2" (click)="openBubble(1)" [ngClass]="{'big-bubble':about2==true}">
+                <button *ngIf="about2==true" class="close-bubble" mat-icon-button (click)="closeBubble(1)">
+                    <mat-icon>close</mat-icon>
+                </button>
+                <span [ngClass]="{'mb-32':about2}">{{"about.about2" | translate}}</span>
+                <div *ngIf="about2" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000">
+                    <ol>
+                        <li *ngFor="let item of contents1">
+                            <a class="text-white" [routerLink]="item.route">
+                                <div>{{item.content | translate}}</div>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="about-bubble-3" (click)="openBubble(2)" [ngClass]="{'big-bubble':about3==true}">
+                <button *ngIf="about3==true" class="close-bubble" mat-icon-button (click)="closeBubble(2)">
+                    <mat-icon>close</mat-icon>
+                </button>
+                <span [ngClass]="{'mb-32':about3}"> {{"about.about3" | translate}}</span>
+                <div *ngIf="about3" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000">
+                    <ol>
+                        <li *ngFor="let item of contents2; let index = index">
+                            <a (click)="openCriticForms(index)" class="text-white" [routerLink]="item.route">
+                                <div>{{item.content | translate}}</div>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-aos="zoom-in" data-aos-duration="1000" class="d-flex justify-content-center align-items-center mt-50">
+        <button routerLink="/blog" mat-button class="btn-theme1 pl-32 pr-32 pt-16 pb-16 border-none" ngClass.xs="font-18" ngClass.gt-sm="font-24 mt-50">
+            Learn why we need E-renity
+        </button>
+    </div>
+</div>

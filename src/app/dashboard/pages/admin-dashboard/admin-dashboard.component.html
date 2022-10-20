@@ -1,0 +1,31 @@
+<div class="bg-white p-s">
+  <div class="oct-table-container">
+    <table 
+    mat-table 
+    [dataSource]="data" 
+    matSort 
+    class="oct-table">
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+          <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="loginTime">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Login Time </th>
+          <td mat-cell *matCellDef="let element"> {{element.loginTime | date:"dd/MM/yyyy"}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="logoutTime">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Log Out Time </th>
+          <td mat-cell *matCellDef="let element"> {{element.logoutTime | date:"dd/MM/yyyy"}} </td>
+        </ng-container>
+      
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let element; columns: displayedColumns;"></tr>
+      </table>
+  </div>
+  <div class="oct-table-page">
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  </div>
+</div>

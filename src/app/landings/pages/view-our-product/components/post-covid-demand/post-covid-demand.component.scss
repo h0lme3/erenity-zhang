@@ -1,0 +1,76 @@
+.issue-post{
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-title{
+    margin-bottom: 90px;
+}
+.e-title{
+    // font-family: ;
+    font-size: 60px;
+}
+.desc{
+    font-size: 45px;
+    height: 45px;
+    margin: 0;
+}
+.desc2{
+    margin-right: 40%;
+}
+.plus{
+    position: absolute;
+    top: 11px;
+    left: 90px;
+    display: flex;
+    align-items: center;
+    height: 140px;
+}
+.minus{
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+.cntn{
+    width: 560px;
+    height: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+    .e-title{
+        // font-family: ;
+        font-size: 40px;
+    }
+    .desc{
+        font-size: 20px;
+    }
+    .plus{
+        width: 50px;
+        position: absolute;
+        top: -8px;
+        left: 70px;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        svg{width: 100%;}
+    }
+    .minus{
+        display: flex;
+        align-items: center;
+        height: 30px;
+        bottom: 15px;
+        top: auto;
+        right: 40px;
+        width: 50px;
+        svg{width: 100%;}
+    }
+    .cntn{
+        width: 100%;
+        height: 100px;
+    }
+}

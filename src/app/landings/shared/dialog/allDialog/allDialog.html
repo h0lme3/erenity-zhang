@@ -1,0 +1,32 @@
+<div class="subscribe-dialog">
+    <div class="header">
+        <div class="d-flex w-100 justify-content-space-between">
+            <div class="w-100" *ngIf="!data.isHeaderIcon">
+                <div class="subscribe-header">{{data.header}}</div>
+            </div>
+            <div class="w-100 text-center" *ngIf="data.isHeaderIcon">
+                <mat-icon class="font-48  text-center font-primary color-danger-light">info</mat-icon>
+            </div>
+            <div class="py-4 p-relative">
+                <button mat-fab class="closed" (click)="onNoClick()">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body">
+        <div [innerHtml]="data.message" class="font-18 pt-16 text-center">{{data.message}}</div>
+    </div>
+
+    <div class="footer">
+        <div></div>
+    </div>
+
+    <div class="d-flex justify-content-center mt-32">
+        <button *ngIf="data.showNoBtn" mat-raised-button data-cy="dialog-ok" cdkFocusInitial class="btn-theme1  pr-32 pl-32 mr-60"
+            (click)="onNoClick()">No</button>
+        <button mat-raised-button data-cy="dialog-ok" cdkFocusInitial class="btn-theme1 pr-32 pl-32"
+            (click)="onYesClick()">{{data.btnOk||"OK"}}</button>
+    </div>
+</div>

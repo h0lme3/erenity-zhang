@@ -1,0 +1,20 @@
+export const menu=[
+    {
+      title:"menu.home",
+      path:"dashboard/home",
+      icon:"assets/images/menu/homepage.png",
+      key:[
+        "dashboard",
+        "home"
+      ]
+    },
+    {
+      title:"menu.admindashboard",
+      path:"dashboard/admin-dashboard",
+      icon:"assets/images/menu/homepage.png",
+      key:[
+        "dashboard",
+        "admin",
+      ]
+    }
+]

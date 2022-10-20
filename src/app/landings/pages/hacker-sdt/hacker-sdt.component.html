@@ -1,0 +1,96 @@
+<div class="tp1 mh-100" fxFlex fxLayout="column">
+    <div class="tp1-intro-2 animate__animated animate__fadeIn">
+        <h1 class="text-center">
+            Specially Designed Test (Tech Sector)
+        </h1>
+        <div class="d-flex justify-content-center">
+            <mat-stepper [linear]="true" #stepper >
+                <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+                    <app-sdt-question-box #questionr1 [answers]="answers[0]" [content]="content[0]" [formGroup]="firstFormGroup"
+                        (result)="updateResult($event)">
+                    </app-sdt-question-box>
+                </mat-step>
+                <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+                    <form [formGroup]="secondFormGroup">
+                        <ng-template matStepLabel></ng-template>
+                        <app-sdt-question-box [answers]="answers[1]" [content]="content[1]"
+                            [formGroup]="secondFormGroup" (result)="updateResult($event)">
+                        </app-sdt-question-box>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="thirdFormGroup" [editable]="isEditable">
+                    <form [formGroup]="thirdFormGroup">
+                        <ng-template matStepLabel></ng-template>
+                        <app-sdt-question-box [answers]="answers[2]" [content]="content[2]" [formGroup]="thirdFormGroup"
+                            (result)="updateResult($event)">
+                        </app-sdt-question-box>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="FormGroup4" [editable]="isEditable">
+                    <form [formGroup]="FormGroup4">
+                        <ng-template matStepLabel></ng-template>
+                        <app-sdt-question-box [answers]="answers[3]" [content]="content[3]" [formGroup]="FormGroup4"
+                            (result)="updateResult($event)">
+                        </app-sdt-question-box>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="FormGroup5" [editable]="isEditable">
+                    <form [formGroup]="FormGroup5">
+                        <ng-template matStepLabel></ng-template>
+                        <app-sdt-question-box [answers]="answers[4]" [content]="content[4]" [formGroup]="FormGroup5"
+                            (result)="updateResult($event)">
+                        </app-sdt-question-box>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="FormGroup6" [editable]="isEditable">
+                    <form [formGroup]="FormGroup6">
+                        <ng-template matStepLabel></ng-template>
+                        <app-sdt-question-box [answers]="answers[5]" [content]="content[5]" [formGroup]="FormGroup6"
+                            (result)="updateResult($event, stepper);">
+                        </app-sdt-question-box>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="FormGroup7" [editable]="isEditable">
+                    <form [formGroup]="FormGroup7">
+                        <ng-template matStepLabel></ng-template>
+                        <app-sdt-question-box [answers]="answers[6]" [content]="content[6]" [formGroup]="FormGroup7"
+                            (result)="updateResult($event)">
+                        </app-sdt-question-box>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="FormGroup8" [editable]="isEditable">
+                    <form [formGroup]="FormGroup8">
+                        <ng-template matStepLabel></ng-template>
+                        <app-sdt-question-box [answers]="answers[7]" [content]="content[7]" [formGroup]="FormGroup8"
+                            (result)="updateResult($event)">
+                        </app-sdt-question-box>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="FormGroup9" [editable]="isEditable">
+                    <form [formGroup]="FormGroup9">
+                        <ng-template matStepLabel></ng-template>
+                        <app-sdt-question-box [answers]="answers[8]" [content]="content[8]" [formGroup]="FormGroup9"
+                            (result)="updateResult($event)">
+                        </app-sdt-question-box>
+                    </form>
+                </mat-step>
+                <mat-step [stepControl]="FormGroup10" [editable]="isEditable">
+                    <form [formGroup]="FormGroup10">
+                        <ng-template matStepLabel></ng-template>
+                        <app-sdt-question-box [answers]="answers[9]" [content]="content[9]" [formGroup]="FormGroup10" [isSubmit]="true"
+                            (result)="updateResult($event);showThankPopup()">
+                        </app-sdt-question-box>
+                    </form>
+                </mat-step>
+                <!-- <mat-step>
+                    <ng-template matStepLabel></ng-template>
+                    <p ngClass.xs="text-center">Thank you for completing this! We will review your results and contact you shortly.</p>
+                    <div>
+                        <button mat-button (click)="onGoToSignUp()">Go to sign up page</button>
+                    </div>
+                </mat-step> -->
+            </mat-stepper>
+        </div>
+
+    </div>
+</div>

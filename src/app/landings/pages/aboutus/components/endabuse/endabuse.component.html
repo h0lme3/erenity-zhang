@@ -1,0 +1,53 @@
+<div class="tp1" fxFlex fxLayout="column">
+    <div fxFlex fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px"
+        class="tp1-intro animate__animated animate__fadeIn">
+        <h1>EndAbuse Project</h1>
+        <div class="d-flex align-items-center text-secondary breadcrumb">
+            <span routerLink="/">Home</span>
+            <mat-icon>navigate_next</mat-icon> <span routerLink="/aboutus">About Us</span>
+            <mat-icon>navigate_next</mat-icon> <span>EndAbuse Project</span>
+        </div>
+    </div>
+    <div fxFlex fxLayout="column" class="tp1-content-4">
+        <mat-tab-group class="mb-60" ngStyle.xs="width:80vw;">
+            <mat-tab *ngFor="let item of contents" [label]="item.label" class="font-18">
+                <h3 fxFlex class="mr-32 mt-32">{{item.title}}</h3>
+                <div fxFlex class="tp1-content-4-1">
+                    <div class="tp1-content-4-1-1">
+                        <p>
+                            {{item.desc}}
+                        </p>
+                        <div class="d-flex justify-content-center">
+                            <a *ngIf="item.route" [href]="item.route" target="_blank">
+                                <button mat-button class="erenity-btn-oval">
+                                    Read More
+                                </button>
+                            </a>
+                            <a *ngIf="item.router" [routerLink]="item.router" target="_blank">
+                                <button mat-button class="erenity-btn-oval">
+                                    Read More
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+        <h3 fxFlex="70" class="mr-32">Conclusion
+            <div class="tp-border"></div>
+        </h3>
+        <p>In short, the part of E-renity that concerns psychology and socio-economic changes demonstrating on
+            victim support programs overlaps with one crucial part of EndAbuse.</p>
+    </div>
+    <div class="bg-hiring">
+        <div class="erenity-revolutionary mh-50 pb-0">
+            <h2 data-aos="zoom-in-up" data-aos-duration="2000">
+                WE ARE HIRING
+            </h2>
+            <a class="text-white" href="mailto:recruit@e-renity.io"><button data-aos="zoom-in-up"
+                    data-aos-duration="3000" mat-button class="btn-theme1 mt-16">Talk
+                    to us and send your CV</button></a>
+        </div>
+    </div>
+</div>

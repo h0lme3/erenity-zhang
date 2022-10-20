@@ -1,0 +1,1143 @@
+@media (max-width:1025px) {
+    nav{
+        padding-bottom: 32px; //32
+        padding-top: 32px; //32
+        transition: 0.5s ease-in-out;
+        width: 100%;
+    
+        img{
+            cursor: pointer;
+        }
+
+        .nav-quote{
+            bottom: -20px;
+            width: 200px;
+        
+        }
+    }
+    .nav-quote{
+        display: none;
+    }
+
+    .menu{
+        display: none !important;
+    }
+    .menu-icon{
+        display: block !important;
+        position: relative;
+        top: 30px;
+    }
+    
+    .fixed-header{
+        position: fixed;
+        padding-bottom: 12px; //12
+        padding-top: 12px; //12
+        z-index:999;
+        width: 100%;
+        background: rgba( 255, 255, 255, 0.85 ) !important;
+        box-shadow: 0 8px 32px 0 #5cb8b224 !important;
+        backdrop-filter: blur( 7.5px ) !important;
+        -webkit-backdrop-filter: blur( 3.5px ) !important;
+    }
+    
+    .sticky {
+        position: fixed;
+        top: 2.6041666666666665vw; //50
+    }
+    
+    .menu div a{
+        font-size: 18px; //18
+        opacity: 70%;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        &.survey-nav-btn{
+            opacity: 100%;
+            font-size: 24px; //24
+            background: -webkit-linear-gradient(#5E03FF, #FF00F7);
+            background-clip: text;
+            color: transparent;
+                }
+    }
+
+    .erenity-intro{
+        min-height: 100vh;
+        padding-top: 188px !important; //118
+        h1{
+            font-size: 36px; //72
+           
+        }
+        h3{
+            font-size: 24px; //24
+           
+        }
+        .btn-theme1{
+            height: 48px; //48
+            width: 150px; //150
+            font-size: 24px; //24
+           
+        }
+        .btn-circle-default{
+            width: 60px !important;
+            height: 60px !important;
+            top: 10.416666666666666vw; //200
+            img{
+                width: 60px !important; //60
+                height: 60px !important; //60
+            }
+        }
+    }
+
+    .erenity-about{
+        // min-height: 70vh;
+        padding-top:60px; //188
+        padding-bottom: 100px;
+        overflow-x: hidden;
+       
+        h3{
+            font-size: 36px; //36
+            color: $text-secondary;
+            font-weight: 700;
+            margin-bottom: 10px;
+            margin-top: 0;
+            transition: 0.5s ease-in-out;
+        }
+        p{
+            font-size: 18px; //30
+            color: $text-secondary;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        .about-us-desc{
+            margin-top:0;
+            padding-top: 0;
+            transition: 0.5s ease-in-out;
+        }
+        img{
+            width: 250px;
+            transition: 0.5s ease-in-out;
+        }
+
+        a{
+            position: relative;
+            bottom: 0;
+            // left: 40px;
+        }
+        .logo-yinteligensia{
+            width: 295px !important;
+            position: relative;
+            left: 15px;
+        }
+    
+    
+        .logo-parts{
+            img{
+                &:nth-child(2){
+                    transition: transform 0.5 ease-in-out;
+                    cursor: pointer;
+                    position: relative;
+                    width: 17px;
+                    right: 173px;
+                    bottom: 2px;
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+                &:nth-child(3){
+                    transition: transform 0.5 ease-in-out;
+                    cursor: pointer;
+                    position: relative;
+                    width: 13px;
+                    right: 135px;
+                    bottom: -2px;
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+                &:nth-child(4){
+                    transition: transform 0.5 ease-in-out;
+                    cursor: pointer;
+                    position: relative;
+                    width: 13px;
+                    right: 95px;
+                    bottom: -3px;
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    
+        .about-links{
+            .about-bubble-1, .about-bubble-2, .about-bubble-3{
+                width: 300px !important;
+                height: 100px;
+                padding: 20px;
+                border-radius: 30px;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                color: white;
+                font-family: yatra-one;
+                transition: .5s ease-in-out;
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            .about-bubble-1{
+                margin-top: 100px;
+            }
+        
+            .about-bubble-3{
+                margin-bottom: 100px;
+            }
+        }
+    }
+
+    .erenity-about2{
+        min-height: 55vh;
+        padding-top:100px; //188
+        padding-bottom: 100px;
+        h3{
+            font-size: 36px; //36
+            font-weight: 700;
+            margin-bottom: 95px;
+            margin-top: 0;
+        }
+        p{
+            font-size: 24px; //30
+            font-weight: 400;
+            line-height: 1.5;
+            margin:0;
+        }
+    }
+
+    .serenity-for-electronics{
+        padding: 60px 0 ;
+        h3{
+            font-size: 48px !important;
+        }
+        h4{
+            margin-top: 32px !important;
+            font-size: 22px !important;
+            font-style: italic ;
+        }
+    }
+    
+    .erenity-our-service{
+        min-height: 100vh;
+        padding-top:188px; //188
+        padding-bottom:100px; //188
+    
+        h3{
+            font-size: 36px; //36
+            font-weight: 700;
+            margin-bottom: 30px !important; //30
+            margin-top: 0;
+        }
+        .sub-1{
+            font-size: 18px; //24
+            font-weight: 400;
+            margin-bottom: 30px; //10
+            margin-top: 0;
+        }
+        .sub-2{
+            font-size: 18px; //18
+            font-weight: 400;
+            margin-bottom: 100px;
+            margin-top: 0;
+        }
+        .services{
+            h4{
+                text-align: center;
+                font-size: 48px; //18
+                margin: 0;
+                margin-bottom: 12px; //12
+                margin-left: 15px; //15
+            }
+            ul{
+                margin: 0;
+            }
+            ul li{
+                font-size: 16px; //14
+                line-height: 1.5;
+            }
+            img{
+                display: none;
+                width: 100%; //100
+                object-fit: contain;
+            }
+        }
+    }
+    
+    .erenity-quote1{
+        min-height: 100vh;
+        padding-top:0; //188
+        padding-bottom:0; //188
+        padding-left: 0;
+        padding-right: 0;
+        background-image: url('../assets/images/quote1bg.png');
+        background-attachment: fixed;
+        h2{
+            font-size: 36px; //72
+            text-align: center;
+            color: white;
+            margin: 0;
+            span{
+                font-size: 36px !important;
+            }
+        }
+    }
+    
+    .erenity-quote2{
+        min-height: 100vh;
+        padding-bottom:0; //60
+        padding-left: 0;
+        padding-right: 0;
+        h2{
+            font-size: 36px; //72
+            text-align: center;
+            background: $primary-r-gradient;
+            background-clip: text;
+            color: transparent;
+            margin: 0;
+            visibility: visible;
+        }
+    }
+
+    .erenity-gain{
+        min-height: 60vh;
+        padding-top:7.791666666666666vw; //188
+        padding-bottom:7.791666666666666vw; //188
+    
+        h3{
+            font-size: 24px; //36
+            color: $text-secondary;
+            font-weight: 700;
+            margin-bottom: 36px;
+            text-align: center;
+        }
+    
+        .gain-left{
+            position: relative;
+            padding: 5.208333333333333vw 3.6458333333333335vw;
+            background: url('../assets/images/Gain.png') ;
+            background-size: cover;
+        }
+    
+        .gain-rigth{
+            display: none;
+        }
+    
+        ul{
+            li{
+                line-height: 2;
+                font-size: 15px;
+                color: black;
+            }
+        }
+    
+        h2{
+            font-size: 36px;
+            background: -webkit-linear-gradient(#5E03FF, #FF00F7);
+            background-clip: text;
+            color: transparent;
+            text-align: center;
+            margin: 0;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+        }
+    
+        h2:hover{
+            color: black;
+        }
+    }
+
+    .erenity-survey-section{
+        min-height: 100vh;
+        padding-bottom:155px; //188
+        padding-top:155px; //188
+    
+        h3{
+            font-size: 36px; //36
+            font-weight: 700;
+            margin-bottom: 1.5625vw !important; //30
+            margin-top: 0;
+        }
+        .sub-1{
+            font-size: 24px; //24
+            font-weight: 400;
+            margin-bottom: 5.791666666666666vw;; //10
+            margin-top: 0;
+        }
+    
+        h3,.sub-1{
+            padding-left: 11.197916666666666vw; //215
+            padding-right: 11.197916666666666vw; //215
+        }
+    
+        .sector-content{
+            position: relative;
+            margin-bottom: 3.75vw;
+        }
+    
+        // .social-sector{
+        //     cursor: pointer;
+        //     position: relative;
+        //     transition: 0.5s ease-in-out;
+        //     width: 160px;
+        //     height: 60px;
+        //     border-radius: 30px;
+        //     margin-right: 10.416666666666666vw;
+        //     background-color: #F9B900;
+        //     span{
+        //         font-size: 24px;
+        //     }
+        // }
+    
+       
+    
+        // .tech-sector{
+        //     cursor: pointer;
+        //     position: relative;
+        //     transition: 0.5s ease-in-out;
+        //     width: 160px;
+        //     height: 60px;
+        //     max-width: 160px;
+        //     border-radius: 30px;
+        //     margin-top: 15px;
+        //     background-color: #00A2FF;
+        //     span{
+        //         font-size: 24px;
+        //     }
+        // }
+    
+        p{
+            font-size: 24px;
+            width: 80%;
+            text-align: center;
+            margin: 0;
+            margin-top: 15px;
+            padding: 1.25vw;
+            a{
+                text-decoration: underline;
+                cursor: pointer;
+                font-weight: bold;
+                transition: 0.5s ease-in-out;
+            }
+            a:hover{
+                color: blue;
+            }
+        }
+    
+        .survey-footer{
+            font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+            color: black;
+            background-color: white;
+            border-radius: 0;
+            width: 61.71875vw;
+            min-width: 100%;
+            margin: 0 auto;
+            padding: 10px;
+        }
+    }
+
+    .erenity-roadmap-content{
+        h3{
+            font-size: 24px;
+        }
+    }
+
+    .erenity-dropdown{
+        .mat-expansion-panel{
+            box-shadow: none !important;
+            background: none !important;
+        }
+        .mat-expansion-panel-header{
+            background: transparent !important;
+            cursor: pointer;
+            padding: 0 !important;
+            padding-right: 24px !important;
+        }
+    
+        .mat-expansion-panel-body{
+                font-family: roboto;
+                font-size: 16px;
+                line-height: 3;
+                outline: none;
+                padding: 0;
+                .links{
+                    width: 100% !important;
+                }
+        }
+    
+        .mat-expansion-panel-header-title{
+                transition: 0.5s ease-in-out;
+                text-align: left;
+                font-family: roboto;
+                font-size: 16px;
+                line-height: 3;
+                outline: none;
+                margin-left: 0;
+                font-weight: 500;
+                &::after{
+                    display:block;
+                    content: '';
+                    transform: scaleX(0);  
+                    border-bottom: solid 3px;  
+                    transition: transform 250ms ease-in-out;
+                    transform-origin:  0% 50%;
+                    border-bottom: solid 3px;
+                }
+            
+                &:hover{
+                    color: black;
+                    opacity: 100%;
+                }
+            
+                &:hover::after{
+                    transform: scaleX(1);
+                }
+        }
+    }
+
+    .tp1{
+        // min-height: 100vh;
+        
+        .breadcrumb{
+            font-size: 12px !important;
+        }
+        h1{
+            font-size: 36px; //72
+            background: $yellow-r-gradient;
+            background-clip: text;
+            color: transparent;
+            margin: 0;
+            text-align: center;
+
+        }
+        h2{
+            font-size: 36px; //36
+            font-weight: 500;
+            margin: 0;
+            font-family: book-antiqua;
+        }
+        h3{
+            font-size: 24px; //24
+            font-weight: 700;
+            margin: 0;
+            font-family: book-antiqua;
+
+        }
+    
+        .tp1-intro{
+            padding-top: 118px; //118
+            padding-right:10.416666666666666vw;
+            // background-color: #F4F8FE !important;
+            min-height: 50vh;
+        }
+
+       
+
+
+        .tp1-content{
+            margin-left:15px;
+            margin-right:15px;
+            padding: 15px !important;
+            background:white;
+            position: relative;
+            h3{
+                background: $third-r-gradient;
+                background-clip: text;
+                color: transparent;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                font-size: 36px;
+                text-align: center;
+            }
+        }
+        
+        .tp1-content-2{
+            min-height: 50vh;
+            background: url('../assets/images/bg-content-stars.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            
+            .tp1-c-2-1{
+                width: 100%;
+                margin-left: 0%;
+                height: 50vh;
+                cursor: pointer;
+                background: #00a2ff66;
+                color: white;
+                transition: .5s ease-in-out !important;
+                h3{
+                    font-size: 18px;
+                    margin:0 30px;
+                    background: $primary-r-gradient;
+                    background-clip: text;
+                    color: transparent;
+                    font-size: 36px;
+                    text-align: center;
+                }
+                &:hover{
+                    transition: .5 ease-in-out !important;
+                    width: 100% !important;
+                    margin-left: 0% !important;
+                    h3{
+                        transition: 0.5s ease-in-out;
+                        background: $primary-r-gradient;
+                        background-clip: text;
+                        color: transparent;
+                        font-weight: bold;
+                        font-size: 3.75vw;
+                        font-family: "FuturaLTW01-Heavy";
+                    }
+                    +.tp1-c-2-2{
+                        width: 0 !important;
+                    }
+                }
+                
+            }
+    
+            .tp1-c-2-2{
+                transition: .5s;
+                width:0;
+                overflow: hidden;
+                white-space: nowrap;
+                a{
+                    width: 100%;
+                    text-align: left;
+                    font-size: 20px;
+                    color: white;
+                    font-family: "FuturaLTW01-Heavy";
+                    margin: 0;
+                    line-height: 2.0;
+                    transition: 0.5s ease-in-out;
+                    &:hover{
+                        cursor: pointer;
+                        background: $primary-r-gradient;
+                        background-clip: text;
+                        color: transparent;
+                    }
+                }
+            }
+           
+        }
+
+        .tp1-content-3{
+            padding: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .tp1-content-4{
+            padding: 30px !important;
+        }
+
+        .tp1-content-5{
+            padding: 30px !important;
+        }
+
+        .tp1-content-6{
+            padding: 30px !important;
+            margin: 0 !important; 
+            .tp1-content-6-1{
+                min-width: 100%;
+            }
+        }
+    
+        .bg-2{
+            background: url('../assets/images/bg-map.jpg');
+        }
+
+        .bg-3{
+            background-image: url('../assets/images/san-fransico-bridge.jpg') !important;
+        }
+
+        .no-bg{
+            background: transparent !important;
+        }
+
+        .title-inprogress{
+            font-size: 36px; //72
+            a{
+                color: transparent;
+                text-decoration: underline;
+                text-decoration-color: $pink;
+                cursor: pointer;
+            }
+        }
+        
+        .tp1-content-3-2{
+            .tp1-content-3-intro{
+                padding: 15px;
+                margin: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width:1366px){
+    nav{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .tp1{
+        .tp1-content-6{
+            padding: 0 6.416666666666666vw;
+            margin: 60px 
+        }
+    }
+
+    .erenity-blog{
+        .erenity-blog-content{
+            padding: 50px 3.416667vw;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .privacy{
+        padding: 155px 10px !important
+    }
+    .erenity-blog{
+        .erenity-blog-content{
+            flex-wrap: wrap;
+            padding: 50px 0;
+            p{
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+                line-height: 1.5;
+            }
+            img{
+                width: 100vw;
+            }
+            h3{
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            h4{
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+    
+    .btn-circle-default{
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .survey-fly{
+        display: none;
+    }
+    .menu{
+        display: none !important;
+    }
+    .menu-icon{
+        display: block !important;
+        position: relative;
+        top: 30px;
+    }
+   nav{
+       padding: 50px;
+       justify-content: space-between !important;
+   }
+   .mid-nav{
+    display: none;
+    }
+
+    .erenity-btn-oval{
+        font-size: 18px;
+        padding: 0 10px !important;
+        margin-bottom: 32px !important;
+    }
+
+    .erenity-intro{
+        padding-top: 0 !important;
+    }
+    
+    .erenity-special-design{
+        // padding-top: 10.416666666666666vw;
+        // padding-left:10.416666666666666vw;
+        // padding-right:10.416666666666666vw;
+        .box-sector{
+            transition: 0.5s ease-in-out;
+            width: 260px;
+            height: 160px;
+            border-radius: 30px;
+            background-color: #F9B900;
+            span{
+                font-size: 28px !important;
+            }
+        }
+        .special-designed-test{
+            min-height: 100vh;
+            padding-top: 118px; //118
+        
+            h1{
+                font-size: 48px; //72
+                background: $primary-r-gradient;
+                background-clip: text;
+                color: transparent;
+                margin: 0;
+                text-align: center;
+            }
+            h2{
+                font-size: 36px; //36
+                font-weight: 500;
+                margin: 0;
+                font-family: book-antiqua;
+                text-align: center;
+            }
+            h3{
+                font-size: 24px; //24
+                font-weight: 500;
+                margin: 0;
+                font-family: book-antiqua;
+                text-align: center;
+            }
+        }
+
+        .special-designed-content{
+            h3{
+                font-size: 36px;
+            }
+            padding-bottom: 75vw;
+        }
+    }
+
+    .erenity-victim{
+        
+        .victim-title{
+            padding-top: 118px;
+            h1{
+                font-size: 36px;
+            }
+        }
+
+        .victim-content{
+            overflow:auto;
+            h2{
+                font-size: 36px;
+            }
+            padding: 32px 15px;
+            .victim-diagram1{
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                flex-wrap: wrap;
+                .diagram3{
+                    margin-bottom: 32px;
+                }
+            }
+            .victim-diagram{
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                flex-wrap: wrap;
+                .diagram1{
+                    width: 352px;
+                    height: 129px;
+                    margin-bottom: 32px;
+                    p{
+                        font-size: 14px;
+                        width: 317px;
+                    }
+                }
+            }
+        }
+    }
+
+    .membership-boxes{
+        height: 441px;
+    }
+
+
+    .erenity-roadmap{
+    
+        .erenity-roadmap-intro{
+            position: relative;
+            z-index: 1;
+            padding-top: 6.145833333333333vw; //118
+            padding-left:10.416666666666666vw;
+            padding-right:10.416666666666666vw;
+            background-color: #F4F8FE;
+            min-height: 100vh;
+        
+            h1{
+                padding-top: 90px;
+                font-size: 36px; //72
+                background: $third-r-gradient;
+                background-clip: text;
+                color: transparent;
+                margin: 0;
+                text-align: center;
+            }
+            h2{
+                font-size: 36px; //36
+                font-weight: 500;
+                margin: 0;
+                font-family: book-antiqua;
+                text-align: center;
+            }
+            h3{
+                font-size: 24px; //24
+                font-weight: 500;
+                margin: 0;
+                font-family: book-antiqua;
+                text-align: center;
+            }
+            button{
+                width: 60px !important;
+                height: 60px !important;
+            }
+        }
+    
+        .erenity-roadmap-content{
+            position: relative;
+            z-index: 0;
+            min-height: auto;
+            background-color: white;
+            padding-bottom: 10.416666666666666vw;
+            padding-top: 72px;
+            transition: 0.5s ease-in-out;
+            transition-delay: 0.25s !important;
+            h3  {
+                font-size: 2.875vw; //36
+                color: $text-secondary;
+                font-weight: 700;
+                margin-bottom: 1.5625vw !important; //30
+                margin-top: 0;
+                text-align: center;
+            }
+            
+            .circular-sb {
+                width: 180px;
+                border: 5px solid #650E48;
+                padding: 53px 0px;
+                margin: 16px auto;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 900;
+                font-family: arial;
+                position: relative;
+                color: #650E48;
+                transition: 0.5s ease-in-out;
+                cursor: pointer;
+            }
+    
+              .circle3 {
+                border: 5px solid #650E48;
+                position: absolute;
+                width: 16px;
+                padding: 14px;
+                border-radius: 50%;
+                left: -6px;
+                bottom: 6px;
+            }
+              
+              .circle3:before {
+                content: "";
+                position: absolute;
+                width: 16px;
+                padding: 14px;
+                border-radius: 50%;
+                right: 0px;
+                bottom: 0px;
+                background: #fff;
+            }
+              
+              .circle4 {
+                border: 5px solid #650E48;
+                position: absolute;
+                width: 5px;
+                padding: 6px 10px;
+                border-radius: 50%;
+                left: -40px;
+                bottom: 5px;
+            }
+        
+              .r-bubble-1, .r-bubble-2, .r-bubble-3, .r-bubble-4{
+                font-size: 14px;
+                width: 200px;
+                // height: 60px !important;
+                border-radius: 15px;
+                transition: 0.5s ease-in-out;
+                text-align: center;
+                cursor: pointer;
+               
+            }
+              
+              .bg-light-yellow{
+                    &.active-r-bubble{
+                        padding: 35px !important;
+                    }
+                }
+            .bg-primary{
+                &.active-r-bubble{
+                    padding: 35px !important;
+                }
+            }
+        }
+    }
+
+    .active-r-bubble{
+        height: 60px !important;
+        padding: 14px !important;
+        margin-bottom: 15px !important;
+        border: 1px solid #650E48 !important;
+   }
+
+   .erenity-joyn-product{
+        min-height: 100vh;
+        h3{
+            font-weight: 700;
+            font-size: 36px;
+            text-align: center;
+        }
+        .joyn-content{
+            h3{
+                font-size: 36px;
+            }
+            // position: relative;
+            // width:18.229166666666668vw;
+            // height: 250px;
+            // font-size: 15px;
+            // font-family: sansation;
+            // .joy-icon{
+            //     position: absolute;
+            //     top: -10px;
+            //     left: -10px;
+            // }
+            padding: 0;
+
+            ol{
+                
+                padding-left:30px ;
+                li{
+                    font-size: 20px;
+                    line-height: 1.5;
+                }
+            }
+        }
+
+        .joyn-content2{
+            ol{
+                
+                padding-left:30px ;
+                li{
+                    font-size: 20px;
+                    line-height: 1.5;
+                }
+            }
+        }
+    } 
+
+    .erenity-revolutionary{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding:0;
+        h2{
+            font-size: 72px !important;
+        }
+    }
+
+    .erenity-serenity{
+        h2{
+            font-size: 48px ;
+        }
+    }
+
+    .erenity-ev{
+        h2{
+            font-size: 48px;
+        }
+        h3{
+            font-size: 24px;
+        }
+    }
+
+    .erenity-footer{
+        margin-top: 0px;
+        
+        .erenity-footer-left{
+            padding: 10px;
+            min-height: auto;
+            p{
+                width: 114px;
+                mat-icon{
+                    margin: 0;
+                }
+            }
+            button{
+                width: 80%;
+                margin-bottom: 35px;
+                margin-top: 30px;
+            }
+        }
+
+        .erenity-footer-center{
+            width: 100%;
+        }
+
+        .erenity-footer-right{
+            min-height:auto;
+        }
+    }
+    .tp1{
+        .tp1-intro-2{
+            padding-left: 10px;
+            padding-right: 10px;
+            .sdt-question-box{
+                padding: 20px;
+            }
+            mat-stepper{
+                width: 350px;
+                .mat-horizontal-stepper-header-container{
+                    overflow: auto !important;
+                }
+                .mat-horizontal-content-container{
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .privacy{
+        padding: 155px .4166666667vw;
+    }
+    .privacy-content{
+        width: 80% !important;
+        height: 50% !important;
+        padding: 20px 26px !important;
+    }
+
+    .privacy-header{
+        font-size: 36px !important;
+    }
+
+    .privacy-content-scroll{
+        font-size: 14px !important;
+    }
+
+    .privacy-content ol{
+        padding-left: 8% !important;
+    }
+
+    .privacy-logo{
+        width: 50% !important;
+    }
+
+    .back-button{
+        font-size: 100% !important;
+    }
+
+    .back-icon{
+        width: 7% !important;
+    }
+
+}

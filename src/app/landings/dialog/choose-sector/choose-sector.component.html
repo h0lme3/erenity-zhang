@@ -1,0 +1,22 @@
+<div>
+    <div class="text-right mt-n2">
+        <button  class="close" [mat-dialog-close]></button>
+    </div>
+    <div class="selector d-flex justify-content-center">
+        <button mat-button class="mr-8" [ngClass]="{'active': select === 'social' }" (click)="choose('social')">
+            <div>
+                <img src="./assets/images/community.png" alt="Social">
+            </div>
+            <div class="font-base">Social Sector</div>
+        </button>
+        <button mat-button  [ngClass]="{'active': select === 'tech' }" (click)="choose('tech')">
+            <div>
+                <img src="./assets/images/platform.png" alt="Tech">
+            </div>
+            <div class="font-base">Tech Sector</div>
+        </button>
+    </div>
+    <div class="mt-16 text-center" >
+        <button mat-button class="btn-base" [disabled]="!select" (click)="submit()">Select</button>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+@import 'src/scss/variables';
+
+.popup-item-cust{
+    padding: 16px;
+    border-radius: 5px;
+    min-width: 400px;
+    max-width: 90%;
+}
+
+.dialog{
+    .header-icon{
+        height: 200px;
+        background-image: $primary-r-gradient;
+        mat-icon{
+            width: 100px;
+            height: 100px;
+            font-size: 100px;
+            
+        }
+    }
+    .header-title{
+        margin-bottom: 32px;
+        margin-top: 32px;
+        font-size: 30px;
+        font-weight: bold;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .body{
+        padding-left: 20px;
+        padding-right: 20px;
+        .erenity-btn-default{
+            background: black;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+
+    .footer{
+        padding-left: 20px;
+        padding-right: 20px;
+        font-weight: 500;
+    }
+}
+
+.closed{
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: black;
+    color: white;
+    mat-icon{
+        position: relative;
+        bottom: 13px;
+    }
+}
+.mw480{
+    max-width: 480px;
+}
+.bg-err{
+    background: $error;
+}
+.pre-wrap{
+    white-space: pre-wrap;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .popup-item-cust{
+        min-width: 300px;
+    }
+}

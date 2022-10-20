@@ -1,0 +1,157 @@
+<div class="tp1" fxFlex fxLayout="column">
+    <div fxFlex fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px"
+        class="tp1-intro animate__animated animate__fadeIn">
+        <h1>Membership</h1>
+        <div class="d-flex align-items-center text-secondary breadcrumb">
+            <span routerLink="/">Home</span>
+            <mat-icon>navigate_next</mat-icon> <span>Membership</span>
+        </div>
+    </div>
+    <div fxFlex fxLayout="column" class="tp1-content-3">
+        <h3>What is a member of E-renity and <br>
+            What can I get from the membership?
+        </h3>
+        <div fxFlex fxLayout="column" class="tp1-content-3-intro mt-32">
+            <p>The following content is for anyone that is not donating or investing in the project, but rather have
+                general interest in working with us on E-renity. </p>
+            <p>If you are commited as a "E-renity member" that works for and with us together on this project, that we
+                would rather receive your commitment by seeing your signature on "Joinee Board" ! </p>
+            <p>Generally, investors and VCs don't have to sign up "Joinee Board", but it is not a strict rule. You can
+                be an investor but also would like to contribute! </p>
+            <p>Please do so with the understanding that monthly meeting is compulsory, and you will then receive a
+                confirmation email for "special recruitment". Thus you don't have to pay for the membership fee- but
+                rather formally a member of us. </p>
+            <h3>By being a member</h3>
+            <p class="mt-32"> You have the full rights to access all membership benefits and more than that, you
+                have the opportunities to network with other members in monthly greet-and-learn (<a
+                    [routerLink]="['/membership/Gnl']" routerLinkActive="router-link-active">GnL</a>). Everybody is
+                gonna: </p>
+            <ol>
+                <li>Have cyberdefense suite and cyberawareness</li>
+                <li>Learn about my story, in 2 ways <br>a) in person presentation <br>b) blog posts, or at least one
+                    article</li>
+                <li>Be addressed as “E-renity project members” instead of “my team”, “my group”, or “my coworkers”, vice
+                    versa between project members, you could say “another member, or just call somebody his or her name”
+                    (if you work on a part of the project together, of course you could call him or her a partner or a
+                    group member), but everyone belongs to the project itself, not belong to me</li>
+                <li>Work entirely part time in the first 25% of the project, participate writing part of the work
+                    contract by themselves</li>
+                <li>Apply for bonus project reward when there is one available</li>
+                <li>Sign on the “<a class="font-bold" routerLink="/membership/joiner-board">Joinee Board</a>” of web
+                    page</li>
+            </ol>
+        </div>
+
+    </div>
+    <div fxFlex fxLayout="column" class="tp1-content-3-2">
+        <div fxFlex fxLayout="column" class="tp1-content-3-intro">
+            <h4>By confirming being a member, you are committed to one type of relationships from the following with
+                E-renity : </h4>
+            <ul>
+                <li>Employee : you need to submit your resume and be interviewed in a way that is either meeting or a
+                    phone call, then you will be selected to work as a certain role and contracted with Yinteligentsia;
+                    you are obliged to follow all regulations instructed under Yinteligentsia</li>
+                <li>Volunteer: you are simply interested in some concepts or the entire project, but you are aware that
+                    you have some blind points or incapabilities so that you can't engage fully; welcome to join as a
+                    volunteer which is an unpaid position but after finishing the commited work, you will gain another
+                    level of understanding toward many things in the project</li>
+                <li>Investor and stakeholder: you want to experience how E-renity works directly, “end-to-end”, and
+                    witness how exactly we do our work and are interested in contents we mentioned such as post-covid
+                    business strategic planning and cybersecurity vaccine products, etc; you are required to submit your
+                    investment proposal with detailed action plan upon application to this member type. </li>
+                <li>Highly-qualified cybersecurity researcher: after viewing what we have to present and the white
+                    paper, you are convinced that E-renity is your way to go and you'd like to have full access to our
+                    database built specially for your research; you believe in our mission and are extremely interested
+                    in the tech part of the project. </li>
+            </ul>
+        </div>
+
+        <div fxFlex fxLayout="column" class="tp1-content-3-intro mt-16 mb-16">
+            <h4>Each of these member types has a different dashboard on our “E-renity project” website. However, the
+                common membership exclusives include: </h4>
+
+            <ul>
+                <li>Free cyber-vaccine (knowledge package + application)</li>
+                <li>Free training materials: post-covid themed value rebuilding, career coaching, trust rebuilding in
+                    the business world and in personal relationships </li>
+                <li>Free newspaper brief delivered to your email periodically based on the most sensitive matter in
+                    today's fast changing digital age</li>
+                <li>Free groupchat support for digital disruption coping strategies - “LiveCyberHelp”</li>
+            </ul>
+
+            <p>For type-specific membership exclusives, we will update this file as we progress. But the general aim is
+                to help each profession achieve E-renity and the general theme is coping with post-covid digital
+                disruptions. </p>
+            <p>I look forward to you joining our membership. Thank you for taking the time to know about us.</p>
+
+            <!-- <h3>E-renity, learn from today. </h3>
+            <button class="erenity-btn-oval mt-16" routerLink="joiner-board" mat-raised-button>Go to Joiner Board</button> -->
+        </div>
+    </div>
+
+    <div fxFlex fxLayout="column" class="tp1-content-3-3 membership-price" fxLayoutAlign="center center">
+        <h2 data-aos="zoom-in-up" data-aos-duration="2000">
+            <b>Membership</b> Prices
+        </h2>
+        <div data-aos="zoom-in-up" data-aos-duration="2000" fxFlex fxLayout="row" fxLayoutGap="20px"
+            fxLayout.xs="column">
+            <div class="membership-boxes mat-elevation-z4" (click)="onBeMembership('Membership Organisation Registration')">
+                <div class="membership-boxes-content">
+                    <h3>Organisation Registration</h3>
+                    <mat-divider></mat-divider>
+                    <p>Show liscence and other legal proof, than get $ 18 in each individual and be a partner with us
+                    </p>
+                    <mat-divider></mat-divider>
+                    <p>Sponsor our project on your website!</p>
+                </div>
+                <div class="membership-boxes-footer">
+                    <button mat-stroked-button class="membership-boxes-btn">
+                        <mat-icon>east</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div class="membership-boxes mat-elevation-z4" (click)="onBeMembership('Membership Group / Community Registration')">
+                <div class="membership-boxes-content">
+                    <h3>Group / Community Registration</h3>
+                    <mat-divider></mat-divider>
+                    <p>$ 30 Per Individual Yearly Subscription For Entity With Size 50 +</p>
+                    <mat-divider></mat-divider>
+                    <p>$ 38 Per Individual Yearly Subscription For Entity With Size 20 - 50</p>
+                    <mat-divider></mat-divider>
+                    <p>$ 45 Per Individual Yearly Subscription For Entity Less Than 20</p>
+                </div>
+                <div class="membership-boxes-footer">
+                    <button mat-stroked-button class="membership-boxes-btn">
+                        <mat-icon>east</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div class="membership-boxes mat-elevation-z4" (click)="onBeMembership('Membership Student Discount')">
+                <div class="membership-boxes-content">
+                    <h3>Student Discount</h3>
+                    <mat-divider></mat-divider>
+                    <p>Show Proof of Education Status</p>
+                    <mat-divider></mat-divider>
+                    <p>$ 35 Yearly Subscription</p>
+                </div>
+                <div class="membership-boxes-footer">
+                    <button mat-stroked-button class="membership-boxes-btn">
+                        <mat-icon>east</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div class="membership-boxes mat-elevation-z4" (click)="onBeMembership('Membership Individual Account')">
+                <div class="membership-boxes-content">
+                    <h3>Individual Account</h3>
+                    <mat-divider></mat-divider>
+                    <p>$ 59 Yearly Subscription</p>
+                </div>
+                <div class="membership-boxes-footer">
+                    <button mat-stroked-button class="membership-boxes-btn">
+                        <mat-icon>east</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

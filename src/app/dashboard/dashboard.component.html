@@ -1,0 +1,12 @@
+<div class="ng-admin admin-fixed" >
+    <headerbar></headerbar>
+    <div class="app-mn-cntn">
+        <menubar class="addc-scroll" [ngClass]="{'collapse-menu-active': collapseMenu}"></menubar>
+        <div class="container-fluid app-cntent" [ngClass]="{'collapse-active': collapseMenu}">
+            <!-- <admin-breadcrumbs></admin-breadcrumbs> -->
+            <div class="admin-content pl-16">
+                <router-outlet></router-outlet>
+            </div> 
+        </div>
+    </div>
+</div>

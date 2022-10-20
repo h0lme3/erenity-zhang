@@ -1,0 +1,52 @@
+<div class="admin-menu bg-white shdw"  >
+    <ul class="menu" >
+        <li class="menu-item addc-scroll" *ngFor="let menu of mn; let i = index">
+            <a class="menu-link d-flex align-items-center" *ngIf="menu.path && !menu.child" [routerLink]="['/'+menu.path]" [name]="menu.title | translate"  routerLinkActive #rla="routerLinkActive" [ngClass]="rla.isActive ? 'link-active' : ''"  (click)="activeClick('')">
+                <i *ngIf="menu.iconclass != undefined" class="icn {{menu.iconclass}}"></i>
+                <img *ngIf="menu.icon != undefined" src="{{menu.icon}}" alt="{{menu.icon}}">
+                <div class="text-menu font-bold" [ngClass]="{'cut-title ':rla.isActive, 'has-icon': menu.icon != undefined}" >{{menu.title | translate}} </div>
+                <refresh-component-button  *ngIf="rla.isActive && urlnow == '/'+menu.path"  class="refresh" [ngClass]="{'has-icon': menu.icon != undefined}" addClass="oct-btn-bg-none" iconColor="#5cb8b2"></refresh-component-button>
+            </a>
+            <button class="menu-link d-flex align-items-center" *ngIf="menu.functionName"   [name]="menu.title | translate" (click)="callFuncMenu(menu)">
+                <i *ngIf="menu.iconclass != undefined" class="icn {{menu.iconclass}}"></i>
+                <img *ngIf="menu.icon != undefined" src="{{menu.icon}}" alt="{{menu.icon}}">
+                <div class="text-menu font-bold" [ngClass]="{ 'has-icon': menu.icon != undefined}" >{{menu.title | translate}} </div>
+            </button>
+            <button class="menu-link has-child d-flex align-items-center" *ngIf="menu.child != undefined" [name]="menu.title | translate" [ngClass]="{'active':menuClick[i],'active-dd':mnDdActive[i]}" (click)="changeMenuActive(i) ">
+                <i *ngIf="menu.iconclass != undefined" class="icn {{menu.iconclass}}"></i>
+                <img *ngIf="menu.icon != undefined" src="{{menu.icon}}" alt="{{menu.icon}}">
+                <div class="text-menu font-bold" >{{menu.title | translate}}</div>
+                <svg class="caretdown" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 1792 1792"><path d="M1408 704q0 26-19 45l-448 448q-19 19-45 19t-45-19l-448-448q-19-19-19-45t19-45 45-19h896q26 0 45 19t19 45z"/></svg>
+            </button>
+            
+    
+            <div class="admin-menu-child" *ngIf="menu.child != undefined" >
+                <ul class="menu" >
+                    <li class="menu-item" *ngFor="let child of menu.child">
+                        <p class="text-seperate text-uppercase" *ngIf="child.path == undefined">{{child.title | translate}} </p>
+                        <a class="menu-link  d-flex align-items-center" *ngIf="child.path != undefined && child.isShow" [routerLink]="['/'+child.path]" routerLinkActive #rla="routerLinkActive" [ngClass]="rla.isActive ? 'link-active' : ''" (click)="activeClick(child.path)" >
+                            <i class="{{child.icon}}"></i>
+                            <div  class="text-menu font-bold" [ngClass]="{'cut-title ':rla.isActive, 'has-icon': child.icon != undefined}">{{child.title | translate}}</div> 
+                            <refresh-component-button *ngIf="rla.isActive  && urlnow == '/'+child.path"  class="refresh" [ngClass]="{'has-icon': child.icon != undefined}" addClass="oct-btn-bg-none" iconColor="#5cb8b2"></refresh-component-button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="bg-white border-top shdw">
+    <button class="w-100 btncollapse font-base text-left font-bold btn-bg-none pt-8 pb-8 pl-16 pr-8" 
+        (click)=" setMenuCollapse(true)" 
+        *ngIf="!collapse" > 
+        <i class="fa fa-angle-double-left pr-1 font-18"></i>
+        {{'menu.collapse' | translate}}
+    </button>
+    <button class="w-100 btncollapse font-base font-bold btn-bg-none  pt-8 pb-8 pl-16 pr-8 text-right" 
+        (click)="setMenuCollapse(false)" 
+        *ngIf="collapse" >
+        {{'menu.show' | translate}}
+        <i class="fa fa-angle-double-right pl-1 font-18"></i>
+    </button>
+</div>
+

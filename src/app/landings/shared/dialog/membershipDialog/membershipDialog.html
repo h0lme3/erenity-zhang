@@ -1,0 +1,47 @@
+<div class="subscribe-dialog">
+    <div class="header">
+        <div class="d-flex w-100 justify-content-space-between p-relative">
+            <div class="w-100">
+                <div class="subscribe-header">{{data.title}}</div>
+                <p style="line-height: 1.5;" class="text-center font-14 pl-24 pr-24">Kindly make payment <a
+                        href=" https://paypal.me/wizphil?country.x=US&locale.x=en_US" target="_blank"
+                        rel="noopener noreferrer">here</a> and schedule a calendar
+                    invite
+                    at <a target="_blank" href="https://calendly.com/elisabeth-68">calendly.com</a>, and key in your
+                    name and email here
+                    to become a member. Your membership details will be
+                    sent to your email once we confirm the payment details thank you!</p>
+            </div>
+            <div class="py-4 p-absolute r-0">
+                <button mat-fab class="closed" (click)="onNoClick()">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body">
+        <div>
+            <form [formGroup]="membershipForm" class="d-flex flex-column pl-32 pr-32">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput type="text" formControlName="name" required>
+                    <mat-error *ngIf="membershipForm.get('name').invalid">Please provide your name.</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" formControlName="email" required>
+                    <mat-error *ngIf="membershipForm.get('email').invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+                <div class="d-flex align-items-center justify-content-center">
+                    <button mat-stroked-button data-cy="dialog-ok" cdkFocusInitial class="erenity-btn-default mt-16"
+                        (click)="onYesClick()">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer mt-32">
+        <div></div>
+    </div>
+</div>

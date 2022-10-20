@@ -1,0 +1,36 @@
+<div class="contain p-relative min-vh-100">
+    <div class="bg"></div>
+    <div class="d-flex flex-column" data-aos="fade-in" data-aos-duration="1000"   >
+        <div >
+            <h3 data-aos="zoom-in" data-aos-duration="1300" class="text-center">
+                <span class="e-title">{{'Sample page for social & tech customer divisions' | translate}}</span>
+            </h3>
+        </div>
+        <div class="d-flex justify-content-center font-20 tbl" >
+            <div class="flex-column">
+                <table class="table" data-aos="zoom-in" data-aos-duration="500"  data-aos-delay="500" >
+                    <thead>
+                        <tr class="ttls">
+                            <th>Social</th>
+                            <th>Tech</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> <mat-checkbox [(ngModel)]="lawyersItExec" color="primary">Lawyers</mat-checkbox></td>
+                            <td><mat-checkbox [(ngModel)]="actv" color="accent">Cybersecurity professionals</mat-checkbox></td>
+                        </tr>
+                        <tr>
+                            <td><mat-checkbox [(ngModel)]="actv" color="accent">Activists</mat-checkbox></td>
+                            <td><mat-checkbox [(ngModel)]="pol" color="warn">Cybersecurity researchers</mat-checkbox></td>
+                        </tr>
+                        <tr>
+                            <td><mat-checkbox [(ngModel)]="pol" color="warn">Politicians</mat-checkbox></td>
+                            <td><mat-checkbox [(ngModel)]="lawyersItExec" color="primary">IT executives</mat-checkbox></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

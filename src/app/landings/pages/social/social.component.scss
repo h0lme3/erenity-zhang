@@ -1,0 +1,12 @@
+.text-priv{
+    color: transparent !important;
+    text-decoration: underline;
+    text-decoration-color: #f320f8;
+    &:hover{
+        text-decoration: underline !important;
+        text-decoration-color: #f320f8 !important;
+    }
+}
+.padding-top-100{
+    padding-top: 100px !important;
+}

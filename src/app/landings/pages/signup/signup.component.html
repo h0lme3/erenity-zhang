@@ -1,0 +1,64 @@
+<div class="erenity-signup">
+    <div>
+        <div class="d-flex justify-content-center">
+            <form [formGroup]="signUpForm" class="d-flex flex-column mat-elevation-z4 px-32">
+                <h3 class="font-30 mt-0 text-center p-relative">
+                    {{"signup_page.title" | translate}}
+                    <button class="btn-bg-none btn-tooltip" mat-icon-button 
+                    matTooltip="Note: Our website is currently still in early development phase. We will be upgrading the website with 2FA & OTP functions in the near future and will inform you when this is ready"
+                    >
+                        <mat-icon>
+                            error
+                        </mat-icon>
+                    </button>
+                </h3>
+                <mat-form-field appearance="outline">
+                    <mat-label>{{"signup_page.email" | translate}}</mat-label>
+                    <input type="email" matInput formControlName="email">
+                    <mat-error *ngIf="signUpForm.get('email').hasError('required')">
+                        {{"signup_page.provideemail" | translate}}
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>{{"signup_page.password" | translate}}</mat-label>
+                    <input [type]="showPassword?'text':'password'" matInput formControlName="pd">
+                    <button matSuffix mat-icon-button aria-label="eyeIcon" (click)="showPassword = !showPassword" *ngIf="!showPassword">
+                        <mat-icon>visibility</mat-icon>
+                    </button>
+                    <button matSuffix mat-icon-button aria-label="eyeIcon" (click)="showPassword = !showPassword" *ngIf="showPassword">
+                        <mat-icon>visibility_off</mat-icon>
+                    </button>
+                    <mat-error *ngIf="signUpForm.get('pd').hasError('required')">
+                        {{"signup_page.providepassword" | translate}}
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>{{"signup_page.confirmpassword" | translate}}</mat-label>
+                    <input  [type]="showConfPassword?'text':'password'" matInput formControlName="cpd">
+                    <button matSuffix mat-icon-button aria-label="eyeIcon" (click)="showConfPassword = !showConfPassword" *ngIf="!showConfPassword">
+                        <mat-icon>visibility</mat-icon>
+                    </button>
+                    <button matSuffix mat-icon-button aria-label="eyeIcon" (click)="showConfPassword = !showConfPassword" *ngIf="showConfPassword">
+                        <mat-icon>visibility_off</mat-icon>
+                    </button>
+
+                    <mat-error *ngIf="signUpForm.get('cpd').hasError('required')">
+                        {{"signup_page.provideconfirmpassword" | translate}}
+                    </mat-error>
+                </mat-form-field>
+                <p class="text-center mb-0 mt-24 font-14">{{"signup_page.tips"| translate}}</p>
+                <div>
+                    <button mat-button class="btn-theme1 w-100 mt-24 mb-24 pb-8 pt-8 font-18" type="submit"
+                        (click)="onSubmit()">{{"signup_page.title" | translate}}</button>
+                </div>
+                <div class="font-14 text-center">
+                    {{"signup_page.haveaccount" | translate}} <a class="font-14 text-underline text-center" [routerLink]="['/login']">{{"signup_page.signin" | translate}}</a>
+                </div>
+                <div class="font-14 text-center mt-16">
+                    By continuing, you are indicating that you agree to Erenity's <a routerLink="/privacy-policy" class="text-underline"> Privacy Notice</a>
+                </div>
+            </form>
+        </div>
+    
+    </div>
+</div>

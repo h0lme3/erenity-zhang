@@ -1,0 +1,54 @@
+.product{
+    padding: 50px 5vw;
+    margin: 50px 0 ;
+}
+.min-w-50{
+    min-width: 50%;
+}
+.e-title{
+    font-size: 60px;
+}
+.descript{
+    padding-left: 5vw;
+    position: relative;
+    margin-bottom: 30px;
+    text-align: right;
+    font-family: 'FuturaLTW01-Heavy';
+    color: #555;
+    width: 400px;
+    margin-right: 0;
+    .level{
+        position: relative;
+        margin-bottom: 30px;
+        transition: all .4s ease-in-out;
+
+        span{
+            text-align: left;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #4f6d7a52;
+            font-size: 50px;
+            display: block;
+            font-family: "FuturaLTW01-Heavy";
+            position: absolute;
+            right: 100%;
+            top: calc(50% - 34px);
+            width: 200px;
+        }
+        p{
+            line-height: 20px;
+            padding: 10px 0 ;
+        }
+        &:hover{
+            transform: scale(1.2);
+        }
+    }   
+}
+.bggry{
+    position: absolute;
+    top: 45vh;
+    left: -20px;
+    background-color: #F4F4F4;
+    height: 100vh;
+    width: 27.3%;
+}

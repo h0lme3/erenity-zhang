@@ -1,0 +1,42 @@
+<div fxFlex fxLayout="column" class="erenity-joyn-product bg-blue-gr3" fxLayoutGap="155px" fxLayoutGap.xs="60px">
+    <div fxLayout="column" fxLayoutAlign="center center">
+        <div class="joyn-content" data-aos="zoom-in" data-aos-duration="1000">
+            <h3 class="text-center">{{"joyn.title" | translate}}
+            </h3>
+            <ol>
+                <li class="d-flex align-items-center mb-32" *ngFor="let item of joyContents; let idx=index">
+                    <button [disableRipple]="true" *ngIf="idx!= 2" mat-fab class="mr-32">
+                        <mat-icon>arrow_forward_ios</mat-icon>
+                    </button>
+                    <div *ngIf="idx!= 1" [ngClass]="{'text-italic':idx==2}">{{item.content | translate}}</div>
+                    <div *ngIf="idx== 1">{{"joyn.t1p2" | translate}} <a class="cursor-pointer text-underline"
+                            [routerLink]="['/aboutus/endabuse-project']">{{"joyn.t1p2a1" | translate}}</a></div>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500"
+        fxLayoutGap="32px">
+        <div fxFlex="50" fxFlex.xs="100" fxLayout="column" class="joyn-content">
+            <h3>{{"joyn.title2" | translate}}
+                <div class="joyn-border"></div>
+            </h3>
+            <img src="./assets/images/unique.jpg" alt="">
+        </div>
+        <div fxFlex="50" fxFlex.xs="100" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="joyn-content2 mat-elevation-z4">
+                <ol>
+                    <li class="d-flex align-items-center" *ngFor="let item of uniqueProducts; let idx= index">
+                        <button *ngIf="idx!=0" [disableRipple]="true" mat-fab class="mr-32">
+                            <mat-icon>arrow_forward_ios</mat-icon>
+                        </button>
+                        <div [ngClass]="{'font-24 font-bold text-center mx-auto mb-32':idx ==0}">
+                            {{item.content | translate}}
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+</div>

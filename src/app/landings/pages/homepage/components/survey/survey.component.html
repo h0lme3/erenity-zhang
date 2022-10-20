@@ -1,0 +1,37 @@
+<div class="erenity-survey-section" fxFlex fxLayout="column" fxLayoutGap.xs="60px">
+    <div>
+        <h3 data-aos="zoom-in" data-aos-duration="1000" class="text-center"
+            [ngClass]="{'animate__animated animate__fadeInDown v-visible':showTitle}">{{"survey.title"|translate}}</h3>
+        <h4 data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500" class="text-center sub-1"
+            [ngClass]="{'animate__animated animate__fadeInDown v-visible animate__delay-1s':showTitle}">
+            {{"survey.subtitle"|translate}}
+        </h4>
+    </div>
+    <div data-aos="zoom-in" data-aos-duration="1000" fxFlex fxLayout.gt.sm="row" fxLayout.sm="column" fxLayoutGap="75px"
+        fxLayoutGap.xs="30px" fxLayout.xs="column" fxLayoutAlign="center center" class="sector-content">
+        <div fxLayout="column" class="social-sector mat-elevation-z4" (click)="goToPage('Social Sector Professionals')">
+            <img src="./assets/images/s1.png" alt="">
+            <span>{{"survey.img1"|translate}}</span>
+        </div>
+        <div fxLayout="column" class="victim-sector mat-elevation-z4" (mouseover)="techEnter=true"
+            (mouseout)="techEnter=false" (click)="goToPage('Victim Sector')">
+            <img src="./assets/images/s2.png" alt="">
+            <span>{{"survey.img2"|translate}}</span>
+        </div>
+        <div fxLayout="column" class="tech-sector mat-elevation-z4" (mouseover)="techEnter=true"
+            (mouseout)="techEnter=false" (click)="goToPage('Tech Sector')">
+            <img src="./assets/images/s3.png" alt="">
+            <span>{{"survey.img3"|translate}}</span>
+        </div>
+    </div>
+    <div data-aos="zoom-in" data-aos-duration="1000" fxFlex fxLayout="column" fxLayoutAlign="center center"
+        class="survey-footer mat-elevation-z4">
+        <p>{{"survey.p1"|translate}} </p>
+        <div class="d-flex justify-space-between align-items-center mt-50">
+            <a class="text-white" routerLink="/survey"> <button mat-button
+                    class="erenity-btn-oval mat-elevation-z4 mr-32">{{"btnTakeSurvey"|translate}}</button></a>
+            <a (click)="goToPage('victim')" class="text-white"><button mat-button
+                    class="erenity-btn-oval mat-elevation-z4 ml-32">{{"btnIamVictim"|translate}}</button></a>
+        </div>
+    </div>
+</div>

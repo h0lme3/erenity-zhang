@@ -1,0 +1,21 @@
+<app-navigations [menuActive]="menuActive" (scrollTo)="scrollTo($event)">
+</app-navigations>
+
+<router-outlet></router-outlet>
+<div class="survey-fly-right">
+    <button class="text" (click)="showSectorPopUp()" rel="noopener noreferrer">
+        <div *ngIf="popShow" [ngClass]="{'animate__delay-4s':firsTimeShow}"
+            class="speech-bubble sb13 d-flex justify-content-center align-items-center animate__animated animate__zoomIn">
+            {{"NAV.TCV" | translate}}
+            <div class="dcircle"></div>
+            <div class="dcircle1"></div>
+            <button class="remove-speech" (click)="popShow = false; firsTimeShow=false" mat-icon-button>
+                <mat-icon>clear</mat-icon>
+            </button>
+        </div>
+    </button>
+    <button (click)="popShow=true; firsTimeShow=false; showSectorPopUp()" mat-fab class="animate__animated animate__zoomIn" >
+        <img src="./assets/images/test.png" width="50" alt="vaccine-icon">
+    </button>
+</div>
+<app-footer (scrollTo)="scrollTo($event)"></app-footer>

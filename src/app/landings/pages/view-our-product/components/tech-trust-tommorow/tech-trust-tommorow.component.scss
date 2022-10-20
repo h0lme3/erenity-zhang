@@ -1,0 +1,27 @@
+.bg{
+    position: absolute;
+    bottom: -10vh;
+    left: -20px;
+    background-color: #F4F4F4;
+    height: 70vh;
+    width: 27.3%;
+}
+.pict{
+    width: 200px;
+    background: #b7b6f6;
+    border-radius: 50%;
+    img{
+        width: 100%;
+    }
+}
+.text{
+    font-family: "FuturaLTW01-Heavy";
+    font-size: 45px;
+    text-align: center;
+    margin-top: -10px;
+}
+.plus,
+.same{
+    font-size: 60px;
+    margin: 0 30px 70px;
+}

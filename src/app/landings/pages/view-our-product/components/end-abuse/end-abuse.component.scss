@@ -1,0 +1,451 @@
+.e-title{
+    font-size: 60px;
+}
+
+.charts{
+    position: relative;
+    max-width: 800px;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    min-width: 720px;
+
+    & > *{
+        position: absolute;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    }
+    
+    .erenity-special{
+        padding: 5px;
+        background: #f0f8ff;
+        top: 220px;
+        left: 110px;
+        width: 70px;
+        border-radius: 6px;
+        z-index: 100;
+    }
+
+    .sdts{
+        top: 230px;
+        z-index: 100;
+        padding: 5px 30px;
+        background: #f0f8ff;
+        left: 210px;
+        right: 160px;
+        text-align: center;
+        
+        &:after{
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 30px 0 30px 30px;
+            border-color: transparent transparent transparent #f0f8ff;
+            position: absolute;
+            top: -12px;
+            right: -30px;
+        }
+    }
+
+    .e-renity{
+        font-size: 30px;
+        padding: 10px;
+        background: #f0f8ff;
+        border-radius: 5px;
+        top: 215px;
+        right: 20px;
+        z-index: 100;
+    }
+    .tech{
+        padding: 5px;
+        background: #f0f8ff;
+        top: 153px;
+        font-size: 20px;
+        width: 80px;
+        text-align: center;
+        right: 110px;
+    }
+    .social{
+        padding: 5px;
+        background: #f0f8ff;
+        top: 303px;
+        font-size: 20px;
+        width: 80px;
+        text-align: center;
+        right: 110px;
+    }
+    .outreach{
+        padding: 5px;
+        border-radius: 5px;
+        background-color: #f0f8ff;
+        width: 100px;
+        top: 0px;
+        right: 190px;
+    }
+    .industry{
+        top: 90px;
+        right: 260px;
+        text-align: center;
+        width: 180px;
+        box-shadow: none;
+        .csind{margin-bottom: 25px;}
+        .allind{margin-top: 25px;}
+        .line-i-1{
+            position: absolute;
+            height: calc(100% - 20px);
+            width: 50px;
+            border-right: 5px solid #555;
+            border-bottom: 5px solid #555;
+            border-top: 5px solid #555;
+            top: 13px;
+            right: -40px;
+            border-radius: 0 100px 100px 0;
+        }
+    }
+    .ve{
+        width: 350px;
+        padding: 5px;
+        border-radius: 5px;
+        background: #EDF6E5;
+        border: 5px dashed #d3e4c4;
+        top: 295px;
+        left: 160px;
+        z-index: 0;
+        text-align: right;
+        padding-right: 160px;
+
+        .end-abuse{
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background: #F38BA0;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .line-1-2{
+            position: absolute;
+            width: 20px;
+            height: calc(100% - 20px);
+            border-right: 5px solid #555;
+            border-bottom: 5px solid #555;
+            border-top: 5px solid #555;
+            border-radius: 0 10px 10px 0;
+            top: 10px;
+            right: 130px;
+        }
+        .line-1-3{
+            height: 5px;
+            position: absolute;
+            width: 21px;
+            background: #555;
+            top: 23px;
+            right: 110px;
+        }
+    }
+
+    .otsr{
+        top: 420px;
+        left: 340px;
+        padding: 5px;
+        border-radius: 5px;
+        background: #f0f8ff;
+    }
+    .endAbuse{
+        top: 420px;
+        left: 180px;
+        padding: 5px;
+        background: #B5EAEA;
+        font-size: 20px;
+        &::after,
+        &::before{
+            content: '';
+        }
+        &::before{ 
+            width: 30px;
+            position: absolute;
+            height: 10px;
+            top: -10px;
+            left: 35px;
+            background: #b5e9eb;
+        }
+        &::after{
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 30px 30px 30px;
+            border-color: transparent transparent #b6e8eb transparent;
+            top: -35px;
+            left: 20px;
+        }
+    }
+
+
+
+    .line-1{
+        width: 40px;
+        background: #555;
+        height: 5px;
+        top: 250px;
+        left: 70px;
+    }
+    .line-2{
+        height: 220px;
+        width: 5px;
+        background: #555;
+        top: 100px;
+        left: 70px;
+    }
+    .line-3{
+        height: 5px;
+        background: #555;
+        top: 100px;
+        left: 70px;
+        right: 450px;
+    }
+    .line-4{
+        width: 130px;
+        height: 5px;
+        background: #555;
+        top: 315px;
+        left: 70px;
+        z-index: 100;
+    }
+    .line-5{
+        width: 130px;
+        height: 160px;
+        border-right: 5px solid #555;
+        border-radius: 0 100px 100px 0;
+        border-top: 5px solid #555;
+        border-bottom: 4px solid #555;
+        top: 170px;
+        right: 30px;
+    }
+    .line-6{
+        width: 30px;
+        height: 5px;
+        background: #555;
+        top: 30px;
+        right: 140px;
+    }
+    .line-7{
+        height: 130px;
+        width: 5px;
+        background: #555;
+        top: 30px;
+        right: 140px;
+    }
+    .line-8{
+        height: 30px;
+        width: 5px;
+        background: #555;
+        top: 125px;
+        right: 160px;
+    }
+    .line-9{
+        width: 63px;
+        height: 5px;
+        background: #555;
+        top: 124px;
+        right: 160px;
+    }
+    .line-10{
+        height: 5px;
+        background: #555;
+        top: 322px;
+        right: 191px;
+        z-index: 100;
+        left: 484px;
+    }
+    .line-11{
+        height: 20px;
+        width: 5px;
+        background: #555;
+        left: 410px;
+        top: 380px;
+    }
+
+
+
+    .line{
+        box-shadow: none !important;
+    }
+    .line-arrow-right{
+        &:after{
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 0 10px 20px;
+            border-color: transparent transparent transparent #555;
+            position: absolute;
+            right: -16px;
+            top: -7px;
+        }
+    }
+    
+    .line-arrow-left{
+        &:after{
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 20px 10px 0;
+            border-color: transparent #555 transparent transparent ;
+            position: absolute;
+            left: -16px;
+            top: -7px;
+        }
+    }
+    .line-arrow-bottom{
+        &:after{
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 20px 12px 0 12px;
+            border-color: #555 transparent transparent transparent;
+            position: absolute;
+            top: 100%;
+            left: -9px;
+        }
+    }
+
+
+}
+
+.charts2{
+    position: relative;
+    max-width: 800px;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    min-width: 720px; 
+
+    & > *{
+        position: absolute;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    }
+
+    .line{
+        box-shadow: none !important;
+    }
+
+    .endAbuse{
+        top: 200px;
+        left: 30px;
+        font-size: 30px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        background: #f0f8ff;
+    }
+    .human-abuse{
+        border-radius: 5px;
+        background: #f0f8ff;
+        padding: 10px 5px;
+        top: 120px;
+        font-size: 20px;
+        left: 210px;
+        width: 140px;
+        text-align: center;
+    }
+    .tech-abuse{
+        border-radius: 5px;
+        background: #f0f8ff;
+        padding: 10px 5px;
+        top: 310px;
+        font-size: 20px;
+        left: 210px;
+        width: 140px;
+        text-align: center;
+    }
+    .ha{
+        top: 100px;
+        left: 430px;
+        font-size: 18px;
+        padding: 10px;
+        box-shadow: none;
+
+        .domestic{
+            margin-bottom: 40px;
+        }
+        .discriminations{
+            margin-top: 40px;
+        }
+        .line-1-1{
+            border: 5px solid #555;
+            border-right: none;
+            height: calc(100% - 40px);
+            position: absolute;
+            width: 30px;
+            border-radius: 10px 0 0 10px;
+            top: 20px;
+            right: 100%;
+        }
+    }
+    .ta{
+        top: 280px;
+        left: 410px;
+        padding: 5px;
+        border: 5px dashed #d3e4c4;
+        background: #EDF6E5;
+        width: 360px;
+        padding-left: 150px;
+
+        .end-abuse{
+            position: absolute;
+            left: 20px;
+            top: 33px;
+            padding: 5px;
+            background: #F38BA0;
+            border-radius: 5px;
+        }
+        
+        .victim{margin-bottom: 40px;}
+        .general{margin-top: 40px;}
+        .line-1-1{
+            border: 5px solid #555;
+            border-right: none;
+            height: calc(100% - 26px);
+            position: absolute;
+            width: 20px;
+            border-radius: 10px 0 0 10px;
+            top: 13px;
+            right: 204px;
+        }
+        .line-1-2{
+            position: absolute;
+            width: 18px;
+            height: 5px;
+            background: #555;
+            top: 47px;
+            left: 110px;
+        }
+    }
+
+    .line-1{
+        border-left: 5px solid #555;
+        height: 200px;
+        border-bottom: 5px solid #555;
+        width: 150px;
+        border-top: 5px solid #555;
+        border-radius: 100px 0 0 100px;
+        top: 135px;
+        left: 70px;
+    }
+    .line-2{
+        height: 5px;
+        width: 60px;
+        background: #555;
+        top: 143px;
+        left: 340px;
+    }
+    .line-3{
+        height: 5px;
+        background: #555;
+        width: 85px;
+        top: 331px;
+        z-index: 100;
+        left: 350px;
+    }
+}

@@ -1,0 +1,22 @@
+<div
+    [ngClass]="{'d-none animate__animated animate__backOutUp w-0 ml-32 h-0':bubble1==null || bubble1!=bubble || !isbubble1Show}">
+    <div class="circular-sb2-pos">
+        <div (click)="setChildBubbleShow.emit()"
+            class="circular-sb circular-sb2 font-16" [ngClass]="{'active-circular':isbubble1child1Show, 
+                'v-visible animate__animated animate__backInDown ml-0 ':(bubble1==bubble) && isbubble1Show}">
+            {{quest}}
+        </div>
+        <div class="r-bubble-2 bg-light-yellow"
+            [ngClass]="{'animate__animated animate__fadeIn active-r-bubble':isbubble1child1Show}">
+            Entry to be filled
+        </div>
+        <div class="r-bubble-2 bg-light-yellow" (click)="goToPage.emit()"
+            [ngClass]="{'animate__animated animate__fadeIn active-r-bubble':isbubble1child1Show}">
+            Take the SDT now
+        </div>
+        <div class="r-bubble-2 bg-light-yellow"
+            [ngClass]="{'animate__animated animate__fadeIn active-r-bubble animate__slow':isbubble1child1Show}">
+            More About Us
+        </div>
+    </div>
+</div>
