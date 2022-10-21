@@ -23,10 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "allowedCommonJsDependencies": [
-              "fabric",
-              "crypto-js"
-            ],
+            "allowedCommonJsDependencies": ["fabric", "crypto-js"],
             "outputPath": "dist/erenity",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -63,13 +60,13 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
               "outputHashing": "all",
-              "optimization": true,
-              "sourceMap": false,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
